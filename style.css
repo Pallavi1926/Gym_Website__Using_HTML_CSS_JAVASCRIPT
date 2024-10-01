@@ -565,6 +565,50 @@ url("assets/banner-2.png");
   color:#5b5757
 }
 
+ form {
+  display: flex;
+}
+#form-bg{
+  background-color: transparent;
+}
+
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input[type="text"]:hover, input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+
+.btn__primary {
+  padding: 20px;
+  background-color: #d44f3b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.btn__primary:active {
+  background-color: #004494;
+  transform: scale(1);
+}
+
 
 .protein__header{
   font-size: 1.2rem;
@@ -749,6 +793,8 @@ url("assets/banner-2.png");
 }
 
 .footer__socials {
+  margin-top: 50px;
+  justify-content: center;
   display: flex;
   align-items: center;
   padding-top: 1.1rem;
