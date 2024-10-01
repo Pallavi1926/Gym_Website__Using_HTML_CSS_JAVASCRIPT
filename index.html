@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>FitPhysique</title>
+   <title>FitPhysique</title>
+
 </head>
 
 <body>
@@ -273,55 +274,74 @@
   </section>
 
   <section class="section__container client__container" id="client">
-    <h2 class="section__header">OUR TESTIMONIALS</h2>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="client__card">
-            <img src="assets/client-1.jpg" alt="client" />
-            <div><i class="ri-double-quotes-r"></i></div>
-            <p>
-              I've been a member at FitPhysique for over a year now, and I
-              couldn't be happier with my experience. The range of classes
-              offered here is impressive - from high-energy cardio sessions to
-              relaxing yoga classes, there's something for everyone.
-            </p>
-            <h4>Sarah Johnson</h4>
+    <section class="section__container client__container" id="client">
+      <h2 class="section__header">OUR TESTIMONIALS</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/client-1.jpg" alt="client" />
+              <div><i class="ri-double-quotes-r"></i></div>
+              <p>
+                I've been a member at FitPhysique for over a year now, and I
+                couldn't be happier with my experience. The range of classes
+                offered here is impressive - from high-energy cardio sessions to
+                relaxing yoga classes, there's something for everyone.
+              </p>
+              <h4>Sarah Johnson</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/client-2.jpg" alt="client" />
+              <div><i class="ri-double-quotes-r"></i></div>
+              <p>
+                The classes are always well-planned and engaging, and the
+                instructors do an excellent job of keeping us motivated
+                throughout. I'm so grateful to have found such a supportive and
+                inclusive gym.
+              </p>
+              <h4>Michael Wong</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/client-3.jpg" alt="client" />
+              <div><i class="ri-double-quotes-r"></i></div>
+              <p>
+                I've tried many gyms in the past, but none of them compare to
+                FitPhysique. From the moment I walked through the doors, I felt
+                welcomed and supported by the staff and fellow members alike.
+              </p>
+              <h4>Emily Davis</h4>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide">
-          <div class="client__card">
-            <img src="assets/client-2.jpg" alt="client" />
-            <div><i class="ri-double-quotes-r"></i></div>
-            <p>
-              The classes are always well-planned and engaging, and the
-              instructors do an excellent job of keeping us motivated
-              throughout. I'm so grateful to have found such a supportive and
-              inclusive gym.
-            </p>
-            <h4>Michael Wong</h4>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="client__card">
-            <img src="assets/client-3.jpg" alt="client" />
-            <div><i class="ri-double-quotes-r"></i></div>
-            <p>
-              I've tried many gyms in the past, but none of them compare to
-              FitPhysique. From the moment I walked through the doors, I felt
-              welcomed and supported by the staff and fellow members alike.
-            </p>
-            <h4>Emily Davis</h4>
-          </div>
+        <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
         </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+    </section>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+          delay: 3000, 
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
 
   <section class="blog" id="blog">
     <div class="section__container blog__container">
@@ -435,8 +455,8 @@
       Copyright © 2024 Web Design Mastery. All rights reserved.
     </div>
   </footer>
-
-
+  
+  
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
