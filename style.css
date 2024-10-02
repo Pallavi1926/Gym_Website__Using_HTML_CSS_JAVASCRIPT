@@ -208,7 +208,7 @@ nav {
 .macro__container {
     background-color: #ffffff;
     /* padding: 10px; */
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: 540px;
     width: 350px;
@@ -722,7 +722,7 @@ span) {
     align-items: center;
     justify-content: center;
     background-color: var(--white);
-    border-radius: 2px;
+    border-radius: 20px;
 }
 
 .footer__col input {
