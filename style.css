@@ -20,11 +20,11 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .section__header {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -40,8 +40,8 @@
   outline: none;
   border: none;
   color: var(--white);
-  border-radius: 2px;
-  transition: 0.3s;
+  border-radius: 10px;
+  transition: 0.7s;
   cursor: pointer;
 }
 
@@ -208,6 +208,13 @@ nav {
   gap: 4rem;
 }
 
+.about__card{
+  border: 1px transparent black;
+  padding: 9%;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
 .about__card h4 {
   position: relative;
   isolation: isolate;
@@ -313,9 +320,14 @@ nav {
   display: grid;
   gap: 1rem;
 }
-
+.trainer__card{
+  padding: 5%;
+  border-radius: 5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -25px, rgba(10, 37, 64, 0.35) 3px -3px 10px 0px inset;
+}
 .trainer__card img {
-  margin-bottom: 1rem;
+  margin: 9% auto;
+  border-radius: 6%;
 }
 
 .trainer__card h4 {
