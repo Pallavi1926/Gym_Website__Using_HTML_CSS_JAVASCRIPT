@@ -581,11 +581,6 @@ url("assets/banner-2.png");
   max-width: 120px;
 }
 
-.footer__col p {
-  margin-bottom: 2rem;
-  color: var(--text-light);
-}
-
 .footer__links {
   list-style: none;
   display: grid;
@@ -605,52 +600,73 @@ url("assets/banner-2.png");
   font-size: 1.2rem;
   color: var(--primary-color);
 }
-
-.footer__col h4 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  font-family: var(--header-font);
-  color: var(--white);
-}
-
 .gallery__grid {
   max-width: 275px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+.footer__col p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  font-size: 1.1rem; /* Adjust font size for better readability */
+  line-height: 1.4;
+}
+
+.footer__col h4 {
+  margin-bottom: 1.5rem; /* Increase bottom margin for more space */
+  font-size: 1.6rem; /* Make headline slightly larger for better emphasis */
+  font-weight: 600; /* Increase font weight for stronger impact */
+  font-family: var(--header-font);
+  color: var(--white);
+}
 
 .footer__col form {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem; /* Add more space between form and other elements */
   width: 100%;
-  max-width: 400px;
-  height: 10.7rem;
+  max-width: 450px; /* Increase max-width for larger screens */
+  height: auto; /* Remove fixed height for better responsiveness */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
-  border-radius: 2px;
-  
+  background-color: var(white);
+  border-radius: 4px; /* Slightly increase border radius for a more modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 .footer__col input {
   width: 100%;
-  padding-inline: 1rem;
-  padding-top: 1.1rem;
+  padding: 1rem; /* Use padding for consistent spacing */
   outline: none;
-  border: none;
-  color: var(--text-dark)
+  border: 1px solid #0a0a0a; /* Add a light border for clarity */
+  border-radius: 4px; /* Match the form's border radius */
+  color: var(black);
+  box-shadow: 0 0 50px 15px #6d242d;
 }
 
-.footer__col form button{
-  
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+
+.footer__col form button {
+  // ... other styles ...
+  overflow: hidden; 
+  box-shadow: 
+    0 2px 2px #555, /* commas */
+    0 6px 5px #777,
+    0 12px 10px #999
+  ;/* Add overflow: hidden to contain the rect element */
+}
+
+.footer_col form button rect {
+  position: absolute; /* Add position: absolute to position the rect correctly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var( );
+  stroke-width: 2;
+  stroke-dasharray: 450, 0;
+  transition: all 1.5s linear;
 }
 
 .footer__socials {
