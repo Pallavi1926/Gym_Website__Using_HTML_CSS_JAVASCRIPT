@@ -13,6 +13,7 @@
 
 * {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -64,7 +65,7 @@
 
 img {
   display: flex;
-  width: 100%;
+  width: 80%;
 }
 
 a {
@@ -103,7 +104,7 @@ nav {
 }
 
 .nav__logo img {
-  max-width: 90px;
+  max-width: 100px;
 }
 
 .nav__menu__btn {
@@ -116,7 +117,7 @@ nav {
   position: absolute;
   top: 68px;
   left: 0;
-  width: 100%;
+  width: 80%;
   padding: 2rem;
   list-style: none;
   display: flex;
@@ -135,7 +136,7 @@ nav {
 }
 
 .nav__links a {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: var(--header-font);
   white-space: nowrap;
   color: var(--white);
@@ -518,60 +519,56 @@ nav {
   margin-inline: auto;
 }
 
-.bmi__header{
+.bmi__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.bmi__container span{
+.bmi__container span {
   color: red;
 }
-.bmi__container{
+.bmi__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.bmi__container .wrapper{
+.bmi__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.bmi__container input{
+.bmi__container input {
   outline: none;
 }
-.bmi__container .btn{
-  color:#5b5757
+.bmi__container .btn {
+  color: #5b5757;
 }
 
- form {
+form {
   display: flex;
 }
-#form-bg{
+#form-bg {
   background-color: transparent;
 }
-
 
 input[type="text"] {
   margin: 10px 0;
@@ -583,13 +580,12 @@ input[type="text"] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-input[type="text"]:hover, input[type="text"]:focus {
+input[type="text"]:hover,
+input[type="text"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
-
 
 .btn__primary {
   padding: 20px;
@@ -602,109 +598,98 @@ input[type="text"]:hover, input[type="text"]:focus {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-
 .btn__primary:active {
   background-color: #004494;
   transform: scale(1);
 }
 
-
-.protein__header{
+.protein__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.protein__container span{
+.protein__container span {
   color: red;
 }
-.protein__container{
+.protein__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.protein__container .wrapper{
+.protein__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.protein__container input{
+.protein__container input {
   outline: none;
 }
-.protein__container .btn{
-  color:#5b5757
+.protein__container .btn {
+  color: #5b5757;
 }
 
-
-.macro__header{
+.macro__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.macro__container span{
+.macro__container span {
   color: red;
 }
-.macro__container{
+.macro__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.macro__container .wrapper{
+.macro__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.macro__container input{
+.macro__container input {
   outline: none;
 }
-.macro__container .btn{
-  color:#5b5757
+.macro__container .btn {
+  color: #5b5757;
 }
-
 
 .footer {
   background-color: var(--text-dark);
@@ -771,7 +756,6 @@ url("assets/banner-2.png");
   justify-content: center;
   background-color: var(--white);
   border-radius: 2px;
-  
 }
 
 .footer__col input {
@@ -780,16 +764,14 @@ url("assets/banner-2.png");
   padding-top: 1.1rem;
   outline: none;
   border: none;
-  color: var(--text-dark)
+  color: var(--text-dark);
 }
 
-.footer__col form button{
-  
+.footer__col form button {
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .footer__socials {
@@ -821,9 +803,6 @@ url("assets/banner-2.png");
   text-align: center;
 }
 
-
-
-
 @media (width > 540px) {
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -850,33 +829,33 @@ url("assets/banner-2.png");
   }
 }
 
-@media (width > 768px){
-  nav{
+@media (width > 768px) {
+  nav {
     position: static;
     padding: 1.5rem 1rem;
   }
 
-  .nav__bar{
+  .nav__bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
   }
 
-  .nav__header{
+  .nav__header {
     padding: 0;
     background-color: transparent;
   }
 
-  .nav__logo img{
+  .nav__logo img {
     max-width: 120px;
   }
 
-  .nav__menu__btn{
-  display: none;
+  .nav__menu__btn {
+    display: none;
   }
 
-  .nav__links{
+  .nav__links {
     position: static;
     padding: 0;
     flex-direction: row;
@@ -941,9 +920,6 @@ url("assets/banner-2.png");
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  
-  
 }
 
 @media (width > 1024px) {
@@ -955,8 +931,3 @@ url("assets/banner-2.png");
     padding: 2rem;
   }
 }
-
-
-
-
-
