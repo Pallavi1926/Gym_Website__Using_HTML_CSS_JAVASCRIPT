@@ -27,42 +27,13 @@ If you're looking to run this project locally, follow these steps:
 
 Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/yourusername/FitPhysique.git
-Navigate to the Project Directory:
-
-bash
-Copy code
-cd FitPhysique
-Install Dependencies: Use npm or yarn to install the necessary packages:
-
-bash
-Copy code
-npm install
-# or
-yarn install
-Run the Project: Start the development server:
-
-bash
-Copy code
-npm start
-# or
-yarn start
-Access the Application: Open your browser and navigate to http://localhost:3000.
-
-Contributing
-We welcome contributions to help improve FitPhysique! Here’s how you can contribute:
-
 Fork the Repository: Click on the fork button to create a personal copy of the project.
 Create a Branch:
 bash
-Copy code
 git checkout -b feature/YourFeatureName
 Make Your Changes: Implement the desired features or fixes.
 Commit Your Changes:
 bash
-Copy code
 git commit -m "Add some feature"
 Push to Your Branch:
 bash
