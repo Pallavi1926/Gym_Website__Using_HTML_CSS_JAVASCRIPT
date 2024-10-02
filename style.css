@@ -158,6 +158,18 @@ nav {
   background-repeat: no-repeat;
 }
 
+/* card hover effect */
+.trainer__card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.trainer__card:hover {
+  transform: scale(1.1);
+}
+
 .header__container {
   padding-block: 10rem;
   display: grid;
