@@ -801,8 +801,12 @@ url("assets/banner-2.png");
   padding-inline: 1rem;
   padding-top: 0.8rem;
   outline: none;
-  border: none;
+  border: 2px solid transparent;
   color: var(--text-dark)
+}
+.footer__col input:hover,
+.footer__col input:focus{
+  border: 2px solid var(--primary-color);
 }
 
 .footer__col form button{
