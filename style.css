@@ -493,6 +493,7 @@ nav {
 }
 
 .blog__card img {
+  margin-top:10px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
