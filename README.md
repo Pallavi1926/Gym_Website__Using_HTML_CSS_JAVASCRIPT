@@ -7,9 +7,9 @@ This project features three essential fitness calculators: **BMI Calculator**, *
 
 ## 🖼️ Screenshot
 
-![Gym Website Preview](https://ek-ta-bharti.github.io/Gym_Website__Using_HTML_CSS_JAVASCRIPT/Screenshot 2024-10-02 162136.png)
+![Additional Preview](https://ek-ta-bharti.github.io/Gym_Website__Using_HTML_CSS_JAVASCRIPT/Screenshot%202024-10-02%20162136.png)
 
-![WordWise Preview](https://ek-ta-bharti.github.io/WordWise/Screenshot%20(267).png)
+
 ## 💻 How to Use
 
 1. Clone the repository:
@@ -23,9 +23,6 @@ This project features three essential fitness calculators: **BMI Calculator**, *
 3. Open the `index.html` file in your browser to interact with the calculators.
 
 
-## Screenshot
-
-![WordWise Preview](https://ek-ta-bharti.github.io/WordWise/Screenshot 2024-10-02 162136.png)
 
 ## 🛠️ Technologies Used
 
@@ -38,3 +35,17 @@ This project features three essential fitness calculators: **BMI Calculator**, *
 - 🔐 Add user authentication for personalized tracking of health goals.
 - 📄 Provide downloadable reports based on the calculator results.
 - 🔄 Integrate with an API to fetch real-time fitness data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
