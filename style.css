@@ -179,6 +179,7 @@ nav {
   font-family: var(--header-font);
   line-height: 3rem;
   color: var(--white);
+
 }
 
 .header__content p {
@@ -674,7 +675,7 @@ input[type="text"]:focus {
   gap: 1.5rem;
   width: 100%;
 
-  background: white;
+  background: black;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
