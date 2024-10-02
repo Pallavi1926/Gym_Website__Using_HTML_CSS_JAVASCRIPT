@@ -572,6 +572,9 @@ url("assets/banner-2.png");
   background-color: transparent;
 }
 
+#form-bg2{
+  background-color: transparent;
+}
 
 input[type="text"] {
   margin: 10px 0;
