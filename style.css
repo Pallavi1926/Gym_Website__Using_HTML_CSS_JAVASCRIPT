@@ -14,8 +14,6 @@
 * {
   padding: 0;
   box-sizing: border-box; 
-  margin: auto;
-  overflow-x: hidden; 
 }
 
 .section__container {
@@ -337,6 +335,9 @@ nav {
   display: grid;
   gap: 1rem;
 }
+.trainer__card{
+  margin:auto;
+}
 
 .trainer__card img {
   margin-bottom: 1rem;
@@ -386,7 +387,7 @@ nav {
 
 .membership__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
   gap: 1rem;
 }
 
@@ -658,6 +659,16 @@ textarea:hover{
   background-color: #004494;
   transform: scale(1);
 }
+.btn:hover{
+  color: #dc030a;
+  cursor:grab;
+}
+#protein-btn:hover{
+  color: #dc030a;
+}
+#macro-btn:hover{
+  color: #dc030a;
+}
 
 
 .protein__header{
@@ -803,9 +814,12 @@ url("assets/banner-2.png");
   font-family: var(--header-font);
   color: var(--white);
 }
+h4{
+  text-align: center;
+}
 
 .gallery__grid {
-  max-width: 275px;
+  max-width: 986px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -875,6 +889,10 @@ url("assets/banner-2.png");
   color: var(--text-light);
   text-align: center;
 }
+form{
+  margin:auto;
+}
+
 
 
 
