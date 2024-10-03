@@ -324,36 +324,6 @@
         </section>
 
         <footer class="footer" id="contact">
-          <div class="section__container footer__container">
-            <div class="footer__col">
-              <div class="footer__logo">
-                <a href="#"><img src="assets/logo.png" alt="logo" /></a>
-              </div>
-              <p>
-                Welcome to FitPhysique, where we believe that every journey to
-                fitness is unique and empowering.
-              </p>
-              <ul class="footer__links">
-                <li>
-                  <a href="#">
-                    <span><i class="ri-map-pin-2-fill"></i></span>
-                    123 Main Street<br />Sunrise Valley, Evergreen Heights
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span><i class="ri-phone-fill"></i></span>
-                    +91 9876543210
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <span><i class="ri-mail-fill"></i></span>
-                    info@fitphysique.com
-                  </a>
-                </li>
-              </ul>
-            </div>
             <div class="footer__col">
               <h4>GALLERY</h4>
               <div class="gallery__grid">
@@ -368,23 +338,6 @@
                 <img src="assets/gallery-9.jpg" alt="gallery" />
               </div>
             </div>
-            <div class="footer__col">
-              <h4>NEWSLETTER</h4>
-              <p>
-                Don't miss out on the latest news and offers - sign up today and
-                join our thriving fitness community!
-              </p>
-              <form onsubmit="sendEmail(); reset(); return false;" id="form-bg">
-                <input type="text" id="name" placeholder="Enter Name" />
-                <input type="text" id="email" placeholder="Enter Email" />
-                <input type="text" id="phone" placeholder="Enter Phone no." />
-                <button type="submit" class="btn btn__primary">SEND</button>
-              </form>
-              <div class="footer__socials">
-                <a href="#"><i class="ri-facebook-fill"></i></a>
-                <a href="#"><i class="ri-twitter-fill"></i></a>
-                <a href="#"><i class="ri-youtube-fill"></i></a>
-              </div>
             </div>
         </div>
         <div class="swiper-pagination">
@@ -556,10 +509,10 @@
         </p>
           <form onsubmit="sendEmail(); reset(); return false;">
             <span id="join">Join</span>
-            <input type="text" id="name" placeholder="Enter Name" />
-            <input type="text" id="email" placeholder="Enter Email" />
-            <input type="text" id="phone" placeholder="Enter Phone no." />
-            <textarea id="message" name="message" rows="8" cols="33">Write your message...</textarea>
+            <label for="text">Enter Name<input type="text" id="name" placeholder="Enter Name" /></label>
+            <label for="text">Enter Email<input type="text" id="email" placeholder="Enter Email" /></label>
+            <label for="text">Enter Phone no.<input type="text" id="phone" placeholder="Enter Phone no." /></label>
+            <textarea id="message" name="message" rows="2" cols="3">Write your message...</textarea>
             <button type="submit" class="btn btn__primary">SEND</button>
           </form>
         <div class="footer__socials">
