@@ -11,6 +11,7 @@ At **FitPhysique**, we’re committed to helping you transform your fitness jour
 But that's not all! We also offer:
 - 📝 **Fitness Blog:** Stay informed with articles full of tips, workout routines, and nutrition advice.
 - 📊 **BMI Calculator:** Track your progress and stay motivated with our easy-to-use Body Mass Index calculator.
+- 📝 **Trainer support:** Also offer health guidance from best trainers.
 
 Ready to take the first step towards a healthier, fitter you?
 
