@@ -83,11 +83,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
+#navbar {
   background-color: var(--text-dark);
-  position: fixed;
   width: 100%;
-  z-index: 9;
+  position: sticky;
+  top: 3px;
+  z-index: 100;
 }
 
 .nav__bar {
