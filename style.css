@@ -42,7 +42,13 @@
   border-radius: 2px;
   transition: 0.3s;
   cursor: pointer;
+  
+  
 }
+.btn:hover{
+  background-color: rgb(121, 107, 115);
+}
+
 
 .btn__primary {
   background-color: var(--primary-color);
@@ -559,13 +565,14 @@ nav {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+
   
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
     to right,
-    rgba(187, 180, 180, 0.8),
+    rgba(35, 10, 10, 0.8),
     rgba(187, 180, 180, 0.8)
   ),
 url("assets/banner-2.png");
@@ -574,7 +581,7 @@ url("assets/banner-2.png");
   outline: none;
 }
 .bmi__container .btn{
-  color:#5b5757
+  color:#272920
 }
 
  form {
