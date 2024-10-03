@@ -10,7 +10,9 @@
   --max-width: 1400px;
   --header-font: "Oswald", sans-serif;
 }
-
+::-webkit-scrollbar {
+  display: none; 
+}
 * {
   padding: 0;
   box-sizing: border-box; 
@@ -246,7 +248,7 @@ nav {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 6rem;
+  font-size: 3rem;
   line-height: 6rem;
   color: var(--text-dark);
   opacity: 0.1;
@@ -270,8 +272,22 @@ nav {
 }
 
 .session {
-  display: grid;
-  width: 100%;
+display: flex;
+justify-content: center;
+}
+@media (max-width: 1024px) {
+  .session {
+    display: block; 
+  }
+  .session__card {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 60%;
+  }
+
 }
 
 .session__card {
@@ -280,6 +296,12 @@ nav {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+   margin-top: 20px;
+   transition: all 0.5s ease-in-out;
+}
+.session__card:hover{
+  transform: scale(0.9);
+  border-radius: 10px;
 }
 
 .session__card:nth-child(1) {
@@ -326,18 +348,29 @@ nav {
 }
 
 .session__card p {
-  max-width: 350px;
+  max-width: 390px;
   margin-inline: auto;
   margin-bottom: 2rem;
+  height: 150px;
   color: var(--extra-light);
 }
 
 .trainer__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
+ display: flex;
 }
 
+@media (max-width: 768px) {
+  .trainer__grid {
+    flex-direction:column;
+   }
+}
+
+.trainer__card{
+  transition: all 0.5s ease-in-out;
+}
+.trainer__card:hover{
+  transform: scale(0.9);
+}
 .trainer__card img {
   margin-bottom: 1rem;
 }
@@ -385,9 +418,12 @@ nav {
 }
 
 .membership__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
+ display: flex;
+}
+@media (max-width: 768px) {
+  .membership__grid {
+    flex-direction: column; 
+  }
 }
 
 .membership__card {
@@ -397,6 +433,7 @@ nav {
 }
 
 .membership__card:hover {
+  transform: scale(0.9);
   background-color: var(--primary-color);
 }
 
