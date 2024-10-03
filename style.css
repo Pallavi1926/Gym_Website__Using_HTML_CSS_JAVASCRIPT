@@ -81,13 +81,15 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
 }
 
 nav {
   background-color: var(--text-dark);
   position: fixed;
+  top: 0; /* Ensure the navbar stays at the top */
   width: 100%;
-  z-index: 9;
+  z-index: 1000; /* Make sure it's above other elements */
 }
 
 .nav__bar {
@@ -158,6 +160,7 @@ nav {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  padding-top: 70px; /* Adjust based on the nav bar height */
 }
 
 /* card hover effect */
@@ -1008,6 +1011,11 @@ url("assets/banner-2.png");
 
   .membership__card {
     padding: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  nav {
+    position: fixed; /* Ensure it's fixed on larger screens as well */
   }
 }
 
