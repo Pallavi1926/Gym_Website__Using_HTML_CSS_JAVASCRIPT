@@ -13,7 +13,6 @@
 
 * {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -163,6 +162,18 @@ nav {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+/* card hover effect */
+.trainer__card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.trainer__card:hover {
+  transform: scale(1.1);
 }
 
 .header__container {
@@ -573,6 +584,169 @@ url("assets/banner-2.png");
   color:#272920
 }
 
+ form {
+  display: flex;
+}
+#form-bg{
+  background-color: transparent;
+}
+
+#join {
+  background-color: #dc030a;
+  width: 5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  border-radius: 8%;
+  color: white;
+  font-weight: 700;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input[type="text"]:hover, input[type="text"]:focus {
+  border-color: #c1406b;
+  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
+  outline: none;
+}
+
+textarea{
+  width: 20rem;
+  height: 6.25rem;
+  color: #8c8787;
+  border: 1px black solid;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+textarea:hover{
+  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
+}
+
+.btn__primary {
+  padding: 20px;
+  background-color: #d44f3b;
+  color: white;
+  border: 2px black solid;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.3rem;
+}
+
+
+
+.btn__primary:active {
+  background-color: #004494;
+  transform: scale(1);
+}
+
+
+.protein__header{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.protein__container span{
+  color: red;
+}
+.protein__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:400px;
+  background: white;
+  
+  
+ 
+}
+
+.protein__container .wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-image: linear-gradient(
+    to right,
+    rgba(187, 180, 180, 0.8),
+    rgba(187, 180, 180, 0.8)
+  ),
+url("assets/banner-2.png");
+}
+.protein__container input{
+  outline: none;
+}
+.protein__container .btn{
+  color:#5b5757
+}
+
+
+.macro__header{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.macro__container span{
+  color: red;
+}
+.macro__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:400px;
+  background: white;
+  
+  
+ 
+}
+
+.macro__container .wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-image: linear-gradient(
+    to right,
+    rgba(187, 180, 180, 0.8),
+    rgba(187, 180, 180, 0.8)
+  ),
+url("assets/banner-2.png");
+}
+.macro__container input{
+  outline: none;
+}
+.macro__container .btn{
+  color:#5b5757
+}
+
 
 .footer {
   background-color: var(--text-dark);
@@ -589,7 +763,6 @@ url("assets/banner-2.png");
 }
 
 .footer__col p {
-  margin-bottom: 2rem;
   color: var(--text-light);
 }
 
@@ -632,7 +805,7 @@ url("assets/banner-2.png");
   margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
-  height: 10.7rem;
+  height: 23.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -645,10 +818,14 @@ url("assets/banner-2.png");
 .footer__col input {
   width: 100%;
   padding-inline: 1rem;
-  padding-top: 1.1rem;
+  padding-top: 0.8rem;
   outline: none;
-  border: none;
+  border: 2px solid transparent;
   color: var(--text-dark)
+}
+.footer__col input:hover,
+.footer__col input:focus{
+  border: 2px solid var(--primary-color);
 }
 
 .footer__col form button{
@@ -661,10 +838,12 @@ url("assets/banner-2.png");
 }
 
 .footer__socials {
+  margin-top: 50px;
+  justify-content: center;
   display: flex;
   align-items: center;
   padding-top: 1.1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer__socials a {
