@@ -32,7 +32,11 @@ body {
   color: #000000;
   text-align: center;
 }
-
+.wrapper h1 {
+  font-size: 28px;
+  color: #000000;
+  text-align: center;
+}
 .wrapper .input-box {
   position: relative;
   width: 100%;
@@ -118,6 +122,13 @@ body {
   text-align: center;
   margin: 20px 0 15px;
 }
+
+
+.wrapper .btn:active {
+  background-color: #004494;
+  transform: scale(1);
+}
+
 
 .register-link p a {
   color: #000000;
