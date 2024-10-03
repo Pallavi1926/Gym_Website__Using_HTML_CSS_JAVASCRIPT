@@ -170,6 +170,17 @@ nav {
   transform: scale(1.1);
 }
 
+.nav_style {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.nav_style:hover {
+  transform: scale(1.5);
+}
+
 .header__container {
   padding-block: 10rem;
   display: grid;
@@ -557,7 +568,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
   
   background: white;
@@ -574,7 +585,8 @@ url("assets/banner-2.png");
   outline: none;
 }
 .bmi__container .btn{
-  color:#5b5757
+  color:whitesmoke;
+  background-color: #5b5757;
 }
 
  form {
@@ -672,7 +684,7 @@ textarea:hover{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
   
   background: white;
@@ -689,7 +701,8 @@ url("assets/banner-2.png");
   outline: none;
 }
 .protein__container .btn{
-  color:#5b5757
+  color:whitesmoke;
+  background-color: #5b5757;
 }
 
 
@@ -720,7 +733,7 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
   
   background: white;
@@ -737,7 +750,8 @@ url("assets/banner-2.png");
   outline: none;
 }
 .macro__container .btn{
-  color:#5b5757
+  color:whitesmoke;
+  background-color: #5b5757;
 }
 
 
