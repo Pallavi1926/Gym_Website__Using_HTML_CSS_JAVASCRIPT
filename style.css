@@ -159,6 +159,18 @@ nav {
   background-repeat: no-repeat;
 }
 
+/* card hover effect */
+.trainer__card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.trainer__card:hover {
+  transform: scale(1.1);
+}
+
 .header__container {
   padding-block: 10rem;
   display: grid;
@@ -583,6 +595,7 @@ form {
   background-color: transparent;
 }
 
+
 input[type="text"] {
   margin: 10px 0;
   padding: 10px;
@@ -593,22 +606,24 @@ input[type="text"] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="text"]:hover,
-input[type="text"]:focus {
+
+input[type="text"]:hover, input[type="text"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
 
+
 .btn__primary {
   padding: 20px;
   background-color: #d44f3b;
   color: white;
-  border: none;
+  border: 2px black solid;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.3rem;
 }
 
 .btn__primary:active {
@@ -719,7 +734,6 @@ input[type="text"]:focus {
 }
 
 .footer__col p {
-  margin-bottom: 2rem;
   color: var(--text-light);
 }
 
@@ -762,7 +776,7 @@ input[type="text"]:focus {
   margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
-  height: 10.7rem;
+  height: 23.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -774,10 +788,14 @@ input[type="text"]:focus {
 .footer__col input {
   width: 100%;
   padding-inline: 1rem;
-  padding-top: 1.1rem;
+  padding-top: 0.8rem;
   outline: none;
   border: none;
-  color: var(--text-dark);
+  color: var(--text-dark)
+}
+.footer__col input:hover,
+.footer__col input:focus{
+  border: 2px solid var(--primary-color);
 }
 
 .footer__col form button {
@@ -793,7 +811,7 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   padding-top: 1.1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer__socials a {
