@@ -48,6 +48,7 @@
 
 .btn__primary {
   background-color: var(--primary-color);
+  border-radius: 17px;
 }
 
 .btn__primary:hover {
@@ -165,7 +166,7 @@ nav {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 11px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
 .trainer__card:hover {
@@ -340,6 +341,7 @@ nav {
 
 .trainer__card img {
   margin-bottom: 1rem;
+  border-radius: 15px;
 }
 
 .trainer__card h4 {
@@ -644,8 +646,8 @@ textarea:hover{
   padding: 20px;
   background-color: #d44f3b;
   color: white;
-  border: 2px black solid;
-  border-radius: 5px;
+  border: 1px black solid;
+  border-radius: 17px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -821,7 +823,7 @@ url("assets/banner-2.png");
   align-items: center;
   justify-content: center;
   background-color: var(--white);
-  border-radius: 2px;
+  border-radius: 25px;
   
 }
 

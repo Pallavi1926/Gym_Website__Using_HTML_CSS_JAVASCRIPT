@@ -58,36 +58,31 @@
     <div class="about__header">
       <h2 class="section__header">ABOUT US</h2>
       <p class="section__description">
-        Our mission is to inspire and support individuals in achieving their
-        health and wellness goals, regardless of their fitness level or
-        background.
+        Our mission is to inspire and support individuals in achieving their health and wellness goals, regardless of their fitness level or background. We believe in empowering everyone to lead a healthier, more fulfilling life.
       </p>
     </div>
     <div class="about__grid">
       <div class="about__card">
-        <h4>WINNER COACHES</h4>
+        <h4>EXPERT COACHES</h4>
         <p>
-          We pride ourselves on having a team of dedicated and experienced
-          coaches who are committed to helping you succeed.
+          Our team of dedicated and experienced coaches is committed to helping you succeed. They bring a wealth of knowledge and passion to every session.
         </p>
       </div>
       <div class="about__card">
-        <h4>AFFORDABLE PRICE</h4>
+        <h4>AFFORDABLE PRICING</h4>
         <p>
-          We believe that everyone should have access to high-quality fitness
-          facilities without breaking the bank.
+          We believe that high-quality fitness facilities should be accessible to everyone. Our competitive pricing ensures you get the best value for your investment.
         </p>
       </div>
       <div class="about__card">
-        <h4>MODERN EQUIPMENTS</h4>
+        <h4>STATE-OF-THE-ART EQUIPMENT</h4>
         <p>
-          Stay ahead of the curve with our state-of-the-art equipment designed
-          to elevate your workout experience.
+          Stay ahead of the curve with our modern, top-of-the-line equipment designed to elevate your workout experience and help you achieve your fitness goals.
         </p>
       </div>
     </div>
   </section>
-
+  
   <section class="session">
     <div class="session__card">
       <h4>BODY BUILDING</h4>
@@ -135,7 +130,7 @@
     <h2 class="section__header">MEET OUR TRAINERS</h2>
     <div class="trainer__grid">
       <div class="trainer__card">
-        <img src="assets/trainer-1.jpg" alt="trainer" />
+        <img src="assets/trainer-1.jpg" alt="David Williams, Body Builder Coach" />
         <h4>DAVID WILLIAMS</h4>
         <p>Body Builder Coach</p>
         <div class="trainer__socials">
@@ -145,7 +140,7 @@
         </div>
       </div>
       <div class="trainer__card">
-        <img src="assets/trainer-2.jpg" alt="trainer" />
+        <img src="assets/trainer-2.jpg" alt="ROSY RIVERA, Cardio Coach" />
         <h4>ROSY RIVERA</h4>
         <p>Cardio Coach</p>
         <div class="trainer__socials">
@@ -369,24 +364,22 @@
               </div>
             </div>
             <div class="footer__col">
-              <h4>NEWSLETTER</h4>
-              <p>
-                Don't miss out on the latest news and offers - sign up today and
-                join our thriving fitness community!
-              </p>
-              <form onsubmit="sendEmail(); reset(); return false;" id="form-bg">
-                <input type="text" id="name" placeholder="Enter Name" />
-                <input type="text" id="email" placeholder="Enter Email" />
-                <input type="text" id="phone" placeholder="Enter Phone no." />
-                <button type="submit" class="btn btn__primary">SEND</button>
-              </form>
-              <div class="footer__socials">
-                <a href="#"><i class="ri-facebook-fill"></i></a>
-                <a href="#"><i class="ri-twitter-fill"></i></a>
-                <a href="#"><i class="ri-youtube-fill"></i></a>
-              </div>
-            </div>
-        </div>
+  <h4>NEWSLETTER</h4>
+  <p>
+    Don't miss out on the latest news and offers - sign up today and join our thriving fitness community!
+  </p>
+  <form onsubmit="sendEmail(); reset(); return false;" id="form-bg">
+    <input type="text" id="name" placeholder="Enter Name" aria-label="Enter Name" required />
+    <input type="email" id="email" placeholder="Enter Email" aria-label="Enter Email" required />
+    <input type="tel" id="phone" placeholder="Enter Phone no." aria-label="Enter Phone no." required />
+    <button type="submit" class="btn btn__primary">SEND</button>
+  </form>
+  <div class="footer__socials">
+    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+    <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
+    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+  </div>
+</div>
         <div class="swiper-pagination">
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet"></span>
@@ -444,12 +437,15 @@
 
     <div class="wrapper">
       <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
+      <p>Heights in CM: 
+        <input type="text" id="Heights" oninput="validHeight()">
+        <br>
+        <span id="Height_error" class="error"></span>
       </p>
-
-      <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
+      <p> Weight in KG:
+        <input type="text" id="weight" oninput="validweight()">
+        <br>
+        <span id="weight_error" class="error"></span>
       </p>
 
       <button class="btn" id="btn">Calculate</button>
@@ -458,25 +454,44 @@
   </section>
 
   <!-- Protein Intake Calculator -->
-  <section class="section__container protein__container">
-    <div class="wrapper">
-      <h2 class="protein__header">Protein Intake Calculator</h2>
-      <p>Enter your details to estimate your daily protein needs:</p>
-      
-      <label for="protein-weight">Weight (kg):</label>
-      <input type="number" id="protein-weight" placeholder="Your weight in kg">
-      
-      <label for="protein-goal">Fitness Goal:</label>
-      <select id="protein-goal">
-        <option value="maintenance">Maintenance</option>
-        <option value="muscle-gain">Muscle Gain</option>
-        <option value="fat-loss">Fat Loss</option>
-      </select>
-      
-      <button class="btn" id="protein-btn">Calculate Protein Intake</button>
-      <p id="protein-output"></p>
-    </div>
-  </section>
+<section class="section__container protein__container">
+  <div class="wrapper">
+    <h2 class="protein__header">Protein Intake Calculator</h2>
+    <p>Enter your details to estimate your daily protein needs:</p>
+    
+    <label for="protein-weight">Weight (kg):</label>
+    <input type="number" id="protein-weight" placeholder="Your weight in kg" aria-label="Enter your weight in kilograms" min="1" required>
+    
+    <label for="protein-goal">Fitness Goal:</label>
+    <select id="protein-goal" aria-label="Select your fitness goal">
+      <option value="maintenance">Maintenance</option>
+      <option value="muscle-gain">Muscle Gain</option>
+      <option value="fat-loss">Fat Loss</option>
+    </select>
+    
+    <button class="btn btn__primary" id="protein-btn">Calculate Protein Intake</button>
+    <p id="protein-output"></p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('protein-btn').addEventListener('click', function() {
+    const weight = document.getElementById('protein-weight').value;
+    const goal = document.getElementById('protein-goal').value;
+    let proteinIntake;
+
+    if (goal === 'maintenance') {
+      proteinIntake = weight * 1.2;
+    } else if (goal === 'muscle-gain') {
+      proteinIntake = weight * 1.6;
+    } else if (goal === 'fat-loss') {
+      proteinIntake = weight * 1.4;
+    }
+
+    document.getElementById('protein-output').textContent = `Your estimated daily protein intake is ${proteinIntake.toFixed(2)} grams.`;
+  });
+</script>
+
 
   <!-- Macronutrient Calculator -->
   <section class="section__container macro__container">
