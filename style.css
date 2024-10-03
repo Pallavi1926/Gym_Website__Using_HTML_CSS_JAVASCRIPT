@@ -993,3 +993,40 @@ url("assets/banner-2.png");
     padding: 2rem;
   }
 }
+/*toggler*/
+.nav__menu__btn {
+  display: none;
+}
+
+.nav__links {
+   position: static;
+    padding: 0;
+    transform: none;
+    z-index: 1;
+}
+
+.nav__links li {
+  margin: 0 10px; 
+}
+
+@media (max-width: 768px) { 
+  .nav__menu__btn {
+    display: block; 
+    cursor: pointer; 
+  }
+
+  .nav__links {
+    display: none; 
+    flex-direction: column; 
+    top: 100%;
+    left: 0;
+    background: rgba(70, 101, 101, 0.934); 
+    width: 100%; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+  .nav__links.active {
+    display: flex; 
+  }
+}

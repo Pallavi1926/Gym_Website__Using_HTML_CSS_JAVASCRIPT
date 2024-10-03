@@ -33,6 +33,7 @@
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
+    
   </nav>
   <header class="header" id="header">
     <div class="section__container header__container">
@@ -567,6 +568,31 @@
     <div class="footer__bar">
       Copyright © 2024 Web Design Mastery. All rights reserved.
     </div>
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const navLinks = document.getElementById('nav-links');
+    
+      // Toggle the menu when the button is clicked
+      menuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+    
+      // Hide the menu when a link is clicked
+      navLinks.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+          navLinks.classList.remove('active');
+        }
+      });
+    
+      // Hide the menu when clicking outside of the navbar
+      document.addEventListener('click', function(event) {
+        if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+          navLinks.classList.remove('active');
+        }
+      });
+    </script>
+    
+    
   </footer>
   
   
