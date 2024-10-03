@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <title>FitPhysique</title>
 
 </head>
@@ -55,7 +56,7 @@
   </header>
 
   <section class="section__container about__container" id="about">
-    <div class="about__header">
+    <div class="about__header" data-aos="zoom-out-up">
       <h2 class="section__header">ABOUT US</h2>
       <p class="section__description">
         Our mission is to inspire and support individuals in achieving their
@@ -63,22 +64,22 @@
         background.
       </p>
     </div>
-    <div class="about__grid">
-      <div class="about__card">
+    <div class="about__grid" style="height: auto;">
+      <div class="about__card" data-aos="zoom-out-up" style="width: 80%; overflow: auto;">
         <h4>WINNER COACHES</h4>
         <p>
           We pride ourselves on having a team of dedicated and experienced
           coaches who are committed to helping you succeed.
         </p>
       </div>
-      <div class="about__card">
+      <div class="about__card" data-aos="zoom-out-up" style="width: 80%;">
         <h4>AFFORDABLE PRICE</h4>
         <p>
           We believe that everyone should have access to high-quality fitness
           facilities without breaking the bank.
         </p>
       </div>
-      <div class="about__card">
+      <div class="about__card" data-aos="zoom-out-up" style="width: 80%;">
         <h4>MODERN EQUIPMENTS</h4>
         <p>
           Stay ahead of the curve with our state-of-the-art equipment designed
@@ -88,17 +89,8 @@
     </div>
   </section>
 
-  <section class="session">
-    <div class="session__card">
-      <h4>BODY BUILDING</h4>
-      <p>
-        Sculpt your physique and build muscle mass with our specialized
-        bodybuilding programs at FitPhysique.
-      </p>
-      <button class="btn btn__secondary">
-        READ MORE <i class="ri-arrow-right-line"></i>
-      </button>
-    </div>
+  <section class="session" >
+    
     <div class="session__card">
       <h4>CARDIO</h4>
       <p>
@@ -278,6 +270,7 @@
     </div>
   </section>
 
+  
   <section class="section__container client__container" id="client">
     <section class="section__container client__container" id="client">
       <h2 class="section__header">OUR TESTIMONIALS</h2>
@@ -323,7 +316,7 @@
           </div>
         </section>
 
-        <footer class="footer" id="contact">
+        <footer class="footer" id="contact" data-aos="zoom-in-up">
           <div class="section__container footer__container">
             <div class="footer__col">
               <div class="footer__logo">
@@ -440,7 +433,7 @@
     </div>
   </section>
 
-  <section class="section__container bmi__container">
+  <section class="section__container bmi__container" data-aos="zoom-in-up">
 
     <div class="wrapper">
       <h2 class="bmi__header">BMI CALCULATOR</h2>
@@ -458,7 +451,7 @@
   </section>
 
   <!-- Protein Intake Calculator -->
-  <section class="section__container protein__container">
+  <section class="section__container protein__container" data-aos="zoom-in-up">
     <div class="wrapper">
       <h2 class="protein__header">Protein Intake Calculator</h2>
       <p>Enter your details to estimate your daily protein needs:</p>
@@ -586,9 +579,12 @@
   document.getElementById('get-started-btn').addEventListener('click', function() {
     window.location.href = 'login.html'; // Redirect to the login page
   });
+
   </script>
-
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>
