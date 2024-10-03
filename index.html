@@ -439,11 +439,11 @@
 
     <div class="wrapper">
       <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
+      <p class="form-p">Height in CM:
         <input type="text" id="height"><br><span id="height_error"></span>
       </p>
 
-      <p>Weight in KG:
+      <p class="form-p">Weight in KG:
         <input type="text" id="weight"><br><span id="weight_error"></span>
       </p>
 
@@ -453,15 +453,15 @@
   </section>
 
   <!-- Protein Intake Calculator -->
-  <section class="section__container protein__container">
+  <section class="protein__container">
     <div class="wrapper">
       <h2 class="protein__header">Protein Intake Calculator</h2>
-      <p>Enter your details to estimate your daily protein needs:</p>
+      <p class="form-p">Enter your details to estimate your daily protein needs:</p>
       
-      <label for="protein-weight">Weight (kg):</label>
+      <label for="protein-weight" class="form-p">Weight (kg):</label>
       <input type="number" id="protein-weight" placeholder="Your weight in kg">
       
-      <label for="protein-goal">Fitness Goal:</label>
+      <label for="protein-goal" class="form-p">Fitness Goal:</label>
       <select id="protein-goal">
         <option value="maintenance">Maintenance</option>
         <option value="muscle-gain">Muscle Gain</option>
@@ -474,22 +474,22 @@
   </section>
 
   <!-- Macronutrient Calculator -->
-  <section class="section__container macro__container">
+  <section class="macro__container">
     <div class="wrapper">
       <h2 class="macro__header">Macronutrient Calculator</h2>
-      <p>Enter your details to calculate your daily macronutrient needs:</p>
+      <p class="form-p">Enter your details to calculate your daily macronutrient needs:</p>
       
-      <label for="macro-weight">Weight (kg):</label>
+      <label for="macro-weight" class="form-p">Weight (kg):</label>
       <input type="number" id="macro-weight" placeholder="Your weight in kg">
 
-      <label for="macro-goal">Fitness Goal:</label>
+      <label for="macro-goal" class="form-p">Fitness Goal:</label>
       <select id="macro-goal">
         <option value="maintenance">Maintenance</option>
         <option value="bulking">Bulking</option>
         <option value="cutting">Cutting</option>
       </select>
 
-      <label for="macro-calories">Daily Calories:</label>
+      <label for="macro-calories" class="form-p">Daily Calories:</label>
       <input type="number" id="macro-calories" placeholder="Your daily calorie intake">
 
       <button class="btn" id="macro-btn">Calculate Macros</button>
