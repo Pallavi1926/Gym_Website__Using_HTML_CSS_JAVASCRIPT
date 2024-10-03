@@ -42,7 +42,10 @@
         <h2>IS FOR EVERY SUCCESS</h2>
         <p>Start by taking inspirations, continue it to give inspirations</p>
         <div class="header__btn">
-          <button class="btn btn__primary">GET STARTED</button>
+          <a href="login.html">
+            <button class="btn btn__primary" id="get-started-btn">GET STARTED</button>
+          </a>
+          
         </div>
 
 
@@ -577,6 +580,14 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
+
+  <script>
+  document.getElementById('get-started-btn').addEventListener('click', function() {
+    window.location.href = 'login.html'; // Redirect to the login page
+  });
+  </script>
+
+
 </body>
 
 </html>
