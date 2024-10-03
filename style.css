@@ -7,13 +7,15 @@
   --text-light: #737373;
   --extra-light: #e5e5e5;
   --white: #ffffff;
-  --max-width: 1200px;
+  --max-width: 1400px;
   --header-font: "Oswald", sans-serif;
 }
 
 * {
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  margin: auto;
+  overflow-x: hidden; 
 }
 
 .section__container {
@@ -743,16 +745,16 @@ url("assets/banner-2.png");
 
 .footer {
   background-color: var(--text-dark);
-}
-
+  width: 100%;
 .footer__container {
   display: grid;
   gap: 4rem 2rem;
+  width: 100%;
 }
 
 .footer__logo img {
   margin-bottom: 1rem;
-  max-width: 120px;
+  max-width: 100vw;
 }
 
 .footer__col p {
@@ -992,4 +994,12 @@ url("assets/banner-2.png");
   .membership__card {
     padding: 2rem;
   }
+}
+
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 5px;
+  }
+}
 }
