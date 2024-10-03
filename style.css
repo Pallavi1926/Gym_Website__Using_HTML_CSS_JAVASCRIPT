@@ -103,7 +103,7 @@ nav {
 }
 
 .nav__logo img {
-  max-width: 90px;
+  max-width: 100px;
 }
 
 .nav__menu__btn {
@@ -531,7 +531,7 @@ nav {
 }
 
 .bmi__header{
-  font-size: 1.2rem;
+  font-size: 1.50rem;
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -563,12 +563,7 @@ nav {
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+  background-color: cadetblue;
 }
 .bmi__container input{
   outline: none;
@@ -612,7 +607,7 @@ input[type="text"]:hover, input[type="text"]:focus {
 }
 
 textarea{
-  width: 20rem;
+  width: 25rem;
   height: 6.25rem;
   color: #8c8787;
   border: 1px black solid;
@@ -646,7 +641,7 @@ textarea:hover{
 
 
 .protein__header{
-  font-size: 1.2rem;
+  font-size: 1.50rem;
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -678,12 +673,7 @@ textarea:hover{
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+  background-color: cadetblue;
 }
 .protein__container input{
   outline: none;
@@ -694,7 +684,7 @@ url("assets/banner-2.png");
 
 
 .macro__header{
-  font-size: 1.2rem;
+  font-size: 1.50rem;
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -726,12 +716,7 @@ url("assets/banner-2.png");
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+  background-color: cadetblue;
 }
 .macro__container input{
   outline: none;
@@ -803,7 +788,7 @@ url("assets/banner-2.png");
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: cadetblue;
   border-radius: 2px;
   
 }
