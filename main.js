@@ -36,6 +36,11 @@ function handleNavigationClick(event) {
     targetSection.scrollIntoView({ behavior: "smooth" });
   }
 
+  function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+   }
+
   // Close the menu after clicking on a link (for mobile)
   navLinks.classList.remove("open");
   menuBtn.setAttribute("aria-expanded", "false");
