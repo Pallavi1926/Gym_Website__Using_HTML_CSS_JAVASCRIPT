@@ -84,16 +84,25 @@ body {
 }
 
 nav {
-  background-color: var(--text-dark);
   position: fixed;
   width: 100%;
   z-index: 100;
 }
 
 .nav__bar {
+  /* max-width: var(--max-width); */
   width: 100%;
-  max-width: var(--max-width);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  transition: background-color 0.3s ease;
   margin-inline: auto;
+<<<<<<< HEAD
+  position: fixed; /* Fix the position */
+  top: 0; /* Stick to the top */
+  left: 0;
+  z-index: 10; /* Make sure it's above other elements */
+  padding-left: 2%;
+  padding-right: 2%;
+=======
   display: flex;
   align-items: center;
   color: white;
@@ -164,6 +173,7 @@ nav {
   font-size: 24px;
   color: white;
   cursor: pointer;
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
 }
 
 .nav__header {
@@ -174,8 +184,57 @@ nav {
   background-color: var(--text-dark);
 }
 
+<<<<<<< HEAD
+body.scrolled .nav__bar {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker on scroll */
+}
+
+.nav__logo img {
+  max-width: 90px;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--text-dark);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%); /*IMP*/
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-size: 1.1rem;
+  font-family: var(--header-font);
+  white-space: nowrap;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+=======
 .nav__bar {
   gap: 10rem;
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
 }
 
 .header {
