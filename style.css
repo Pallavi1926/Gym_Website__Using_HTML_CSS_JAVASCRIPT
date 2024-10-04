@@ -57,6 +57,7 @@
 .btn__secondary {
   background-color: transparent;
   border: 1px solid var(--white);
+  border-radius: 10px;
 }
 
 .btn__secondary:hover {
