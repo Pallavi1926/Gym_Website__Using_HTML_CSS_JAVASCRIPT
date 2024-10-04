@@ -575,218 +575,184 @@ nav {
   margin-inline: auto;
 }
 
-.bmi__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
+/* ---------------YOUR REQUIREMENTS------------- */
 
-.bmi__container span{
-  color: red;
+.requirements{
+  background-color: #0a0a0a;
+  margin: 45px;
+  padding: 23px;
 }
-.bmi__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height:400px;
-  background: white;
+.container-require{
+  display: grid;
+  grid-template-columns: 30vw 30vw 30vw;
+  grid-gap: 10px;
+  margin-top: 23px;
   
-  
- 
+}
+h1.required{
+  font-size: 35px;
+  font-weight: 900;
+  margin-left: 550px;
+  color: #fff;
 }
 
-.bmi__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1 rem;
-  width: 100%;
-  
-  background: white;
-  border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
-}
-.bmi__container input{
-  outline: none;
-}
-.bmi__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
-}
-
- form {
-  display: flex;
-}
-#form-bg{
-  background-color: transparent;
-}
-
-#join {
-  background-color: #dc030a;
-  width: 5rem;
-  text-align: center;
-  margin-top: 0.5rem;
-  border-radius: 8%;
-  color: white;
-  font-weight: 700;
-}
-
-input[type="text"] {
-  margin: 10px 0;
-  padding: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-input[type="text"]:hover, input[type="text"]:focus {
-  border-color: #c1406b;
-  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
-  outline: none;
-}
-
-textarea{
-  width: 20rem;
-  height: 6.25rem;
-  color: #8c8787;
-  border: 1px black solid;
-  margin-top: 0.5rem;
-  border-radius: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-textarea:hover{
-  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
-}
-
-.btn__primary {
+/* -------BMI CALCULATOR------- */
+.container-bmi {
+  margin-left: 55px;
+  background-color: white;
   padding: 20px;
-  background-color: #d44f3b;
+  padding-top: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 350px;
+  height: 70vh;
+  text-align: center;
+}
+
+h1.bmi {
+  margin-bottom: 5px;
+}
+
+.input-group-bmi {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+#btn-bmi{
+  background-color: var(--primary-color);
   color: white;
-  border: 2px black solid;
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 0.3rem;
-}
-
-
-
-.btn__primary:active {
-  background-color: #004494;
-  transform: scale(1);
-}
-
-
-.protein__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.protein__container span{
-  color: red;
-}
-.protein__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height:400px;
-  background: white;
-  
-  
- 
 }
 
-.protein__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1 rem;
+#btn-bmi:hover {
+  background-color: #45a049;
+}
+
+#result-bmi {
+  margin-top: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* ----------------------Protien intake calculator------------------------ */
+.container-protien {
+  background-color: #fff;
+  padding: 20px;
+  padding-top: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  height: 70vh;
   width: 100%;
-  
-  background: white;
+}
+
+h1.protein {
+  color: #333;
+  margin-bottom: 5px;
+
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#btn-protien {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btn-protien:hover {
+    background-color: #218838;
+}
+
+#result-protien {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color:#333;
+}
+
+/* ----------------Calorie Calculator--------------- */
+
+.container-calorie {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1.calorie {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
-}
-.protein__container input{
-  outline: none;
-}
-.protein__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
 }
 
-
-.macro__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.macro__container span{
-  color: red;
-}
-.macro__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+button {
   width: 100%;
-  height:400px;
-  background: white;
-  
-  
- 
-}
-
-.macro__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1 rem;
-  width: 100%;
-  
-  background: white;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
   border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+  cursor: pointer;
 }
-.macro__container input{
-  outline: none;
+
+button:hover {
+  background-color: #218838;
 }
-.macro__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
+
+.results {
+  margin-top: 20px;
+  display: none;
 }
+
+p {
+  margin: 5px 0;
+}
+
 
 
 .footer {
