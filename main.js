@@ -47,102 +47,96 @@ navLinksItems.forEach((link) => {
 });
 
 // Existing BMI Calculator Logic
-bmiBtn.addEventListener("click", () => {
-  const height = parseInt(document.getElementById("height").value);
-  const weight = parseInt(document.getElementById("weight").value);
-  const result = document.getElementById("output");
-  let heightStatus = false,
-    weightStatus = false;
+let button=document.getElementById('btn-bmi')
 
-  if (height === "" || isNaN(height) || height <= 0) {
-    document.getElementById("height_error").innerHTML =
-      "Please provide a valid height";
-  } else {
-    document.getElementById("height_error").innerHTML = "";
-    heightStatus = true;
-  }
-
-  if (weight === "" || isNaN(weight) || weight <= 0) {
-    document.getElementById("weight_error").innerHTML =
-      "Please provide a valid weight";
-  } else {
-    document.getElementById("weight_error").innerHTML = "";
-    weightStatus = true;
-  }
-
-  if (heightStatus && weightStatus) {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-
-    if (bmi < 18.6) {
-      result.innerHTML = "Underweight: " + bmi;
-    } else if (bmi > 24.9) {
-      result.innerHTML = "Overweight: " + bmi;
-    } else {
-      result.innerHTML = "Normal: " + bmi;
+button.addEventListener('click',() => {
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value);
+    
+    if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+      document.getElementById("result").innerHTML = "Please enter valid weight and height values.";
+      return;
     }
-  } else {
-    alert("The form has errors");
-    result.innerHTML = "";
-  }
-});
+  
+    const bmi = (weight / (height * height)).toFixed(2);
+    let category = '';
+  
+    if (bmi < 18.5) {
+      category = 'Underweight';
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      category = 'Normal weight';
+    } else if (bmi >= 25 && bmi < 29.9) {
+      category = 'Overweight';
+    } else {
+      category = 'Obese';
+    }
+  
+    document.getElementById("result-bmi").innerHTML = `Your BMI is ${bmi} (${category})`;
+  });
 
 // Add Protein Intake Calculator Logic
-document.getElementById("protein-btn").addEventListener("click", function () {
-  let weight = parseFloat(document.getElementById("protein-weight").value);
-  let goal = document.getElementById("protein-goal").value;
-  let proteinIntake;
+function calculateProtein() {
+  const weight = document.getElementById('weight').value;
+  const activity = document.getElementById('activity').value;
 
-  // Protein intake values based on goals (in grams per kg)
-  if (goal === "maintenance") {
-    proteinIntake = weight * 1.2;
-  } else if (goal === "muscle-gain") {
-    proteinIntake = weight * 1.6;
-  } else if (goal === "fat-loss") {
-    proteinIntake = weight * 2.0;
+  if (weight === '0' || activity === '0') {
+      alert("Please enter all fields");
+      return;
   }
 
-  document.getElementById(
-    "protein-output"
-  ).innerHTML = `You need approximately ${proteinIntake.toFixed(
-    2
-  )} grams of protein per day.`;
-});
+  // Protein intake formula (grams per kg of body weight)
+  const proteinIntake = (weight * activity).toFixed(2);
 
-// Add Macronutrient Calculator Logic
-document.getElementById("macro-btn").addEventListener("click", function () {
-  let weight = parseFloat(document.getElementById("macro-weight").value);
-  let goal = document.getElementById("macro-goal").value;
-  let calories = parseFloat(document.getElementById("macro-calories").value);
+  document.getElementById("result-protien").textContent = `Your daily protein intake should be: ${proteinIntake} grams.`;
+}
 
-  let proteinRatio, carbRatio, fatRatio;
 
-  // Macro ratios based on fitness goals
-  if (goal === "maintenance") {
-    proteinRatio = 0.3;
-    carbRatio = 0.4;
-    fatRatio = 0.3;
-  } else if (goal === "bulking") {
-    proteinRatio = 0.25;
-    carbRatio = 0.5;
-    fatRatio = 0.25;
-  } else if (goal === "cutting") {
-    proteinRatio = 0.35;
-    carbRatio = 0.3;
-    fatRatio = 0.35;
+
+
+
+
+
+  // Calorie count Calculator
+document.getElementById('calorieForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Get user input values
+  const age = document.getElementById('age').value;
+  const gender = document.getElementById('gender').value;
+  const height = document.getElementById('height').value;
+  const weight = Number(document.getElementById('weight').value);
+  const activityLevel = parseFloat(document.getElementById('activity').value);
+  const goal = document.getElementById('goal').value;
+
+  // Calculate BMR (Basal Metabolic Rate) using Mifflin-St Jeor Equation
+  let bmr;
+  if (gender === 'male') {
+      bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else {
+      bmr = 10 * weight + 6.25 * height - 5 * age - 161;
   }
 
-  // Calculate macros in grams
-  let proteinGrams = (calories * proteinRatio) / 4;
-  let carbGrams = (calories * carbRatio) / 4;
-  let fatGrams = (calories * fatRatio) / 9;
+  // Calculate daily caloric needs based on activity level
+  let dailyCalories = bmr * activityLevel;
 
-  document.getElementById(
-    "macro-output"
-  ).innerHTML = `Your daily macronutrient breakdown: 
-      Protein: ${proteinGrams.toFixed(2)}g, 
-      Carbs: ${carbGrams.toFixed(2)}g, 
-      Fats: ${fatGrams.toFixed(2)}g.`;
+  // Adjust for fitness goal
+  if (goal === 'lose') {
+      dailyCalories -= 500; // For weight loss, reduce 500 calories per day
+  } else if (goal === 'gain') {
+      dailyCalories += 500; // For weight gain, increase 500 calories per day
+  }
+
+  // Display the result
+  document.getElementById('caloriesResult').textContent = `Calories: ${dailyCalories.toFixed(0)} kcal/day`;
+
+  // Show the results section
+  document.querySelector('.results').style.display = 'block';
 });
+
+
+
+
+
 
 // Send email logic
 function sendEmail() {

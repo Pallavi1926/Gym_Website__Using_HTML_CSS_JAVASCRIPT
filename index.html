@@ -31,6 +31,7 @@
         <li><a href="#trainer">TRAINER</a></li>
         <li><a href="#client">CLIENT</a></li>
         <li><a href="#blog">BLOG</a></li>
+        <li><a href="#requirements">YOUR REQUIREMENTS</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <i class="ri-close-line"></i>
       </ul>
@@ -444,77 +445,96 @@
     </div>
   </section>
 
-  <section class="section__container bmi__container">
+  <section class="requirements" id="requirements">
+    <h1 class="required">YOUR REQUIREMENTS</h1>
+    <div class="container-require">
 
-    <div class="wrapper">
-      <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
-      </p>
+      <!---------BMI Calculator -------->
+      <div class="container-bmi">
+        <h1 class="bmi">Your BMI</h1>
+        <div class="input-group-bmi">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="Enter weight" required>
+        </div>
+        <div class="input-group-bmi">
+          <label for="height">Height (m):</label>
+          <input type="number" id="height" placeholder="Enter height" step="0.01" required>
+        </div>
+        <button id="btn-bmi">Calculate BMI</button>
+        <div id="result-bmi"></div>
+      </div>
 
-      <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
-      </p>
+      <!----------------Protien Intake Calculator ---------------->
+      <div class="container-protien">
+        <h1 class="protein">Required Protein Intake</h1>
+        <form id="proteinForm">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
 
-      <button class="btn" id="btn">Calculate</button>
-      <p id="output"></p>
+          <label for="activity">Activity Level:</label>
+          <select id="activity" name="activity" required>
+            <option value="1.2">Sedentary</option>
+            <option value="1.4">Lightly Active</option>
+            <option value="1.6">Moderately Active</option>
+            <option value="1.8">Very Active</option>
+            <option value="2.0">Athlete</option>
+          </select>
+
+          <button id="btn-protien" type="button" onclick="calculateProtein()">Calculate</button>
+        </form>
+
+        <p id="result-protien"></p>
+      </div>
+
+      <!----------------------Calorie Count --------------------->
+
+      <div class="container-calorie">
+        <h1 class="calorie">Required Calorie Intake</h1>
+        <form id="calorieForm">
+          <label for="age">Age:</label>
+          <input type="number" id="age" placeholder="Enter your age" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" placeholder="Enter your height in cm" required>
+
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" placeholder="Enter your weight in kg" required>
+
+          <label for="activity">Activity Level:</label>
+          <select id="activity" required>
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise)</option>
+            <option value="1.55">Moderately active (moderate exercise)</option>
+            <option value="1.725">Very active (hard exercise)</option>
+            <option value="1.9">Super active (very hard exercise)</option>
+          </select>
+
+          <label for="goal">Fitness Goal:</label>
+          <select id="goal" required>
+            <option value="maintain">Maintain Weight</option>
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Weight</option>
+          </select>
+
+          <button type="submit">Calculate</button>
+        </form>
+
+        <div class="results">
+          <h2>Your Daily Caloric Needs</h2>
+          <p id="caloriesResult">Calories: </p>
+        </div>
+      </div>
     </div>
+
   </section>
 
-  <!-- Protein Intake Calculator -->
-  <section class="section__container protein__container">
-    <div class="wrapper">
-      <h2 class="protein__header">Protein Intake Calculator</h2>
-      <p>Enter your details to estimate your daily protein needs:</p>
 
-      <label for="protein-weight">Weight (kg):</label>
-      <input type="number" id="protein-weight" placeholder="Your weight in kg">
-
-      <label for="protein-goal">Fitness Goal:</label>
-      <select id="protein-goal">
-        <option value="maintenance">Maintenance</option>
-        <option value="muscle-gain">Muscle Gain</option>
-        <option value="fat-loss">Fat Loss</option>
-      </select>
-
-      <button class="btn" id="protein-btn">Calculate Protein Intake</button>
-      <p id="protein-output"></p>
-    </div>
-  </section>
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <!-- Macronutrient Calculator -->
-  <section class="section__container macro__container">
-    <div class="wrapper">
-      <h2 class="macro__header">Macronutrient Calculator</h2>
-      <p>Enter your details to calculate your daily macronutrient needs:</p>
-
-      <label for="macro-weight">Weight (kg):</label>
-      <input type="number" id="macro-weight" placeholder="Your weight in kg">
-
-      <label for="macro-goal">Fitness Goal:</label>
-      <select id="macro-goal">
-        <option value="maintenance">Maintenance</option>
-        <option value="bulking">Bulking</option>
-        <option value="cutting">Cutting</option>
-      </select>
-
-      <label for="macro-calories">Daily Calories:</label>
-      <input type="number" id="macro-calories" placeholder="Your daily calorie intake">
-
-      <button class="btn" id="macro-btn">Calculate Macros</button>
-      <p id="macro-output"></p>
-    </div>
-  </section>
-
-
-  <br>
-  <br>
-  <br>
-  <br>
   <footer class="footer" id="contact">
     <div class="section__container footer__container">
       <div class="footer__col">
