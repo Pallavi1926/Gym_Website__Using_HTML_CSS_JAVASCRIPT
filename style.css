@@ -359,18 +359,18 @@ nav {
 .session__card p {
   max-width: 350px;
   margin-inline: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: var(--extra-light);
 }
 
 .trainer__grid {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .trainer__card img {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .trainer__card h4 {
@@ -382,7 +382,7 @@ nav {
 }
 
 .trainer__card p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: var(--text-light);
   text-align: center;
 }
@@ -391,7 +391,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .trainer__socials a {
@@ -972,6 +972,7 @@ url("assets/banner-2.png");
 
   .trainer__grid {
     grid-template-columns: repeat(4, 1fr);
+   
   }
 
   .membership__grid {
@@ -997,6 +998,7 @@ url("assets/banner-2.png");
 @media (width > 1024px) {
   .trainer__grid {
     gap: 2rem;
+    
   }
 
   .membership__card {
