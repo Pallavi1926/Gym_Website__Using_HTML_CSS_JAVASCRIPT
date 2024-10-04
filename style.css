@@ -24,17 +24,25 @@
   padding: 5rem 1rem;
 }
 
-.section__header {
+/* .section__header {
   font-size: 2rem;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
   text-align: center;
+} */
+.full-width {
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove default margin */
+  padding: 0 20px; /* Optional: Add padding to prevent text from touching the edges */
 }
 
 .section__description {
+  text-align: center; /* Optional: Center-align the text */
   color: var(--text-light);
 }
+
+
 
 .btn {
   padding: 0.75rem 1.5rem;
