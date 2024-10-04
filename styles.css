@@ -5,7 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+body { {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +18,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 .wrapper {
