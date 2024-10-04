@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>FitPhysique</title>
 
@@ -327,95 +328,12 @@
           </div>
     </section>
 
-    <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="footer__logo">
-            <a href="#"><img src="assets/logo.png" alt="logo" /></a>
-          </div>
-          <p>
-            Welcome to FitPhysique, where we believe that every journey to
-            fitness is unique and empowering.
-          </p>
-          <ul class="footer__links">
-            <li>
-              <a href="#">
-                <span><i class="ri-map-pin-2-fill"></i></span>
-                123 Main Street<br />Sunrise Valley, Evergreen Heights
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span><i class="ri-phone-fill"></i></span>
-                +91 9876543210
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span><i class="ri-mail-fill"></i></span>
-                info@fitphysique.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>GALLERY</h4>
-          <div class="gallery__grid">
-            <img src="assets/gallery-1.jpg" alt="gallery" />
-            <img src="assets/gallery-2.jpg" alt="gallery" />
-            <img src="assets/gallery-3.jpg" alt="gallery" />
-            <img src="assets/gallery-4.jpg" alt="gallery" />
-            <img src="assets/gallery-5.jpg" alt="gallery" />
-            <img src="assets/gallery-6.jpg" alt="gallery" />
-            <img src="assets/gallery-7.jpg" alt="gallery" />
-            <img src="assets/gallery-8.jpg" alt="gallery" />
-            <img src="assets/gallery-9.jpg" alt="gallery" />
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>NEWSLETTER</h4>
-          <p>
-            Don't miss out on the latest news and offers - sign up today and
-            join our thriving fitness community!
-          </p>
-          <form onsubmit="sendEmail(); reset(); return false;" id="form-bg">
-            <input type="text" id="name" placeholder="Enter Name" />
-            <input type="text" id="email" placeholder="Enter Email" />
-            <input type="text" id="phone" placeholder="Enter Phone no." />
-            <button type="submit" class="btn btn__primary">SEND</button>
-          </form>
-          <div class="footer__socials">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-youtube-fill"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination">
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-      </div>
-      </div>
-  </section>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   
 
 
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
 
   <section class="blog" id="blog">
     <div class="section__container blog__container">
@@ -511,80 +429,66 @@
   </section>
 
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <footer class="footer" id="contact">
-    <div class="section__container footer__container">
-      <div class="footer__col">
-        <div class="footer__logo">
-          <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+
+
+  <footer>
+    <div class="footer-container">
+        <div class="info">
+            <div class="logo"><img src="assets/logo.png" alt=""></div>
+            <p>Welcome to FitPhysique, where we believe that every journey to fitness is unique and empowering.</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Sunrise Valley, Evergreen Heights</li>
+                <li><i class="fas fa-phone-alt"></i> +91 9876543210</li>
+                <li><i class="fas fa-envelope"></i> info@fitphysique.com</li>
+            </ul>
         </div>
-        <p>
-          Welcome to FitPhysique, where we believe that every journey to
-          fitness is unique and empowering.
-        </p>
-        <ul class="footer__links">
-          <li>
-            <a href="https://www.google.com/maps/search/gyms+near+me" target="_blank">
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              123 Main Street<br />Sunrise Valley, Evergreen Heights
-            </a>
-          </li>
-          <li>
-            <a href="tel:+919876543210">
-              <span><i class="ri-phone-fill"></i></span>
-              +91 9876543210
-            </a>
-          </li>
-          <li>
-            <a href="mailto:info@fitphysique.com">
-              <span><i class="ri-mail-fill"></i></span>
-              info@fitphysique.com
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>GALLERY</h4>
-        <div class="gallery__grid">
-          <img src="assets/gallery-1.jpg" alt="gallery" />
-          <img src="assets/gallery-2.jpg" alt="gallery" />
-          <img src="assets/gallery-3.jpg" alt="gallery" />
-          <img src="assets/gallery-4.jpg" alt="gallery" />
-          <img src="assets/gallery-5.jpg" alt="gallery" />
-          <img src="assets/gallery-6.jpg" alt="gallery" />
-          <img src="assets/gallery-7.jpg" alt="gallery" />
-          <img src="assets/gallery-8.jpg" alt="gallery" />
-          <img src="assets/gallery-9.jpg" alt="gallery" />
+
+        <div class="gallery">
+            <h3>GALLERY</h3>
+            <div class="gallery-grid">
+                <img src="assets/gallery-1.jpg" alt="gallery image 1">
+                <img src="assets/gallery-2.jpg" alt="gallery image 2">
+                <img src="assets/gallery-3.jpg" alt="gallery image 3">
+                <img src="assets/gallery-4.jpg" alt="gallery image 4">
+                <img src="assets/gallery-5.jpg" alt="gallery image 5">
+                <img src="assets/gallery-6.jpg" alt="gallery image 6">
+                <img src="assets/gallery-7.jpg" alt="gallery image 7">
+                <img src="assets/gallery-8.jpg" alt="gallery image 8">
+            </div>
         </div>
-      </div>
-      <div class="footer__col">
-        <h4>NEWSLETTER</h4>
-        <p>
-          Don't miss out on the latest news and offers - sign up today and
-          join our thriving fitness community!
-        </p>
-        <form onsubmit="sendEmail(); reset(); return false;">
-          <span id="join">Join</span>
-          <input type="text" id="name" placeholder="Enter Name" />
-          <input type="text" id="email" placeholder="Enter Email" />
-          <input type="text" id="phone" placeholder="Enter Phone no." />
-          <textarea id="message" name="message" rows="8" cols="33">Write your message...</textarea>
-          <button type="submit" class="btn btn__primary">SEND</button>
-        </form>
-        <div class="footer__socials">
-          <a href="#" id="facebook"><i class="ri-facebook-fill"></i></a>
-          <a href="#" id="twitter"><i class="ri-twitter-fill"></i></a>
-          <a href="#"><i class="ri-youtube-fill"></i></a>
+
+        <div class="newsletter">
+            <h3>NEWSLETTER</h3>
+            <p>Don't miss out on the latest news and offers - sign up today and join our thriving fitness community!</p>
+            <form>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter Name" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Enter Email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Enter Phone no." required>
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>
         </div>
-      </div>
     </div>
-    <div class="footer__bar">
-      Copyright © 2024 Web Design Mastery. All rights reserved.
+
+    <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-  </footer>
+
+    <div class="footer-bottom">
+        <p>Copyright &copy; 2024 Web Design Mastery. All rights reserved.</p>
+    </div>
+</footer>
 
 
 
@@ -599,8 +503,5 @@
       window.location.href = 'login.html'; // Redirect to the login page
     });
   </script>
-
-
 </body>
-
 </html>
