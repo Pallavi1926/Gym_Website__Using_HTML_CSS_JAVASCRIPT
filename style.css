@@ -597,6 +597,30 @@ nav {
  
 }
 
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1 rem;
+  width: 100%;
+  padding: 30px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-image: linear-gradient(
+    to right,
+    rgba(187, 180, 180, 0.8),
+    rgba(187, 180, 180, 0.8)
+  ),
+url("assets/banner-2.png");
+}
+
+#output{
+  color: black;
+  font-weight: 800;
+}
+
 .bmi__container .wrapper{
   display: flex;
   justify-content: center;
@@ -615,12 +639,27 @@ nav {
   ),
 url("assets/banner-2.png");
 }
+
+.bmi__container{
+  padding: 30px;
+}
+
+.wrapper{
+  margin: 30px;
+}
+
 .bmi__container input{
   outline: none;
 }
 .bmi__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: #d44f3b;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn:hover{
+  background-color: #c64132;
 }
 
  form {

@@ -47,13 +47,13 @@ navLinksItems.forEach((link) => {
 });
 
 // Existing BMI Calculator Logic
+bmiBtn = document.getElementById("bmi-btn");
 bmiBtn.addEventListener("click", () => {
   const height = parseInt(document.getElementById("height").value);
   const weight = parseInt(document.getElementById("weight").value);
   const result = document.getElementById("output");
   let heightStatus = false,
     weightStatus = false;
-
   if (height === "" || isNaN(height) || height <= 0) {
     document.getElementById("height_error").innerHTML =
       "Please provide a valid height";
