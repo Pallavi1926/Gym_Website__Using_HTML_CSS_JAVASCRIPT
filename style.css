@@ -391,11 +391,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .trainer__socials a {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-light);
 }
 
