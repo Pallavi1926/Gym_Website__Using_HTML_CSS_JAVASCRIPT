@@ -1,7 +1,7 @@
 /*---------------------Slider-------------------------*/
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
-const closeIcon = navLinks.querySelector("i.ri-close-line");
+const closeIcon = navLinks.querySelector("i.ri-close-circle-fill");
 
 // Toggle the mobile menu visibility
 menuBtn.addEventListener("click", () => {
