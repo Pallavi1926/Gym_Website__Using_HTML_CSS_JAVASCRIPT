@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form id="register-form">
+      <h2>Create Account</h2>
+      <img src="/assets/logo.png" alt="">
+
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="email" placeholder="Email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class='bx bxs-show' id="togglePassword" style="position: absolute; right: 20px; top: 30%; cursor: pointer;"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        <i class='bx bxs-show' id="toggleConfirmPassword" style="position: absolute; right: 20px; top: 30%; cursor: pointer;"></i>
+      </div>
+      
+      <div id="error-message" style="color: rgb(0, 0, 0);  font-size: 14px ;"; ></div>
+
+      <button type="submit" class="btn">Register</button>
+      <div class="register-link">
+        <p>Already have an account? <a href="login.html" id="login-link">Login</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.classList.toggle('bx-show');
+      this.classList.toggle('bx-hide');
+    });
+
+    // Toggle confirm password visibility
+    const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    toggleConfirmPassword.addEventListener('click', function () {
+      const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      confirmPasswordInput.setAttribute('type', type);
+      this.classList.toggle('bx-show');
+      this.classList.toggle('bx-hide');
+    });
+
+    // Handle form submission and password confirmation
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const errorMessageDiv = document.getElementById('error-message');
+
+      // Clear previous error message
+      errorMessageDiv.textContent = '';
+
+      if (password !== confirmPassword) {
+        errorMessageDiv.textContent = "Passwords do not match! Please try again.";
+        return;
+      }
+
+      alert("Passwords match! Registration successful."); // Replace with actual submission logic
+      // this.submit(); // Uncomment to allow the form to submit if using a real action
+    });
+
+    // Redirect to login page
+    document.getElementById('login-link').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor behavior
+      window.location.href = 'login.html'; // Redirect to the login page
+    });
+  </script>
+</body>
+</html>
