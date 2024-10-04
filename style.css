@@ -82,16 +82,23 @@ body {
 }
 
 nav {
-  background-color: var(--text-dark);
   position: fixed;
   width: 100%;
   z-index: 9;
 }
 
 .nav__bar {
+  /* max-width: var(--max-width); */
   width: 100%;
-  max-width: var(--max-width);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  transition: background-color 0.3s ease;
   margin-inline: auto;
+  position: fixed; /* Fix the position */
+  top: 0; /* Stick to the top */
+  left: 0;
+  z-index: 10; /* Make sure it's above other elements */
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .nav__header {
@@ -100,6 +107,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: var(--text-dark);
+}
+
+body.scrolled .nav__bar {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker on scroll */
 }
 
 .nav__logo img {
