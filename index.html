@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-   <title>FitPhysique</title>
+  <title>FitPhysique</title>
 
 </head>
 
@@ -18,30 +19,38 @@
     <div class="nav__bar">
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+          <a href="#header"><img src="assets/logo.png" alt="logo" /></a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#home">HOME</a></li>
+        <li><a href="#header" class="active">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#trainer">TRAINER</a></li>
         <li><a href="#client">CLIENT</a></li>
         <li><a href="#blog">BLOG</a></li>
         <li><a href="#contact">CONTACT</a></li>
+        <i class="ri-close-line"></i>
       </ul>
     </div>
   </nav>
+
+
   <header class="header" id="header">
     <div class="section__container header__container">
       <div class="header__content">
         <h1>HARD WORK</h1>
-        <h2>IS FOR EVERY SUCCESS</h2>
-        <p>Start by taking inspirations, continue it to give inspirations</p>
+        <h2>IS THE KEY TO EVERY SUCCESS</h2>
+        <p>Start by taking inspiration, and continue by becoming an inspiration.</p>
+        <p>At <strong>FitPhysique</strong>, we believe in the power of persistence and dedication. Embrace the journey,
+          push your limits, and watch yourself transform.</p>
         <div class="header__btn">
-          <button class="btn btn__primary">GET STARTED</button>
+          <a href="login.html">
+            <button class="btn btn__primary" id="get-started-btn">GET STARTED</button>
+          </a>
+
         </div>
 
 
@@ -317,7 +326,6 @@
             </div>
           </div>
         </section>
-        <!-- Fixed Duplication Here -->
 
         <!-- <footer class="footer" id="contact">
           <div class="section__container footer__container">
@@ -382,14 +390,13 @@
                 <a href="#"><i class="ri-youtube-fill"></i></a>
               </div>
             </div>
-          </div>
-        </footer> -->
-          <div class="swiper-pagination">
+        </div> -->
+        <div class="swiper-pagination">
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-          </div>
         </div>
+      </div>
     </section>
     
     
@@ -459,28 +466,32 @@
     <div class="wrapper">
       <h2 class="protein__header">Protein Intake Calculator</h2>
       <p>Enter your details to estimate your daily protein needs:</p>
-      
+
       <label for="protein-weight">Weight (kg):</label>
       <input type="number" id="protein-weight" placeholder="Your weight in kg">
-      
+
       <label for="protein-goal">Fitness Goal:</label>
       <select id="protein-goal">
         <option value="maintenance">Maintenance</option>
         <option value="muscle-gain">Muscle Gain</option>
         <option value="fat-loss">Fat Loss</option>
       </select>
-      
+
       <button class="btn" id="protein-btn">Calculate Protein Intake</button>
       <p id="protein-output"></p>
     </div>
   </section>
 
+  <br>
+  <br>
+  <br>
+  <br>
   <!-- Macronutrient Calculator -->
   <section class="section__container macro__container">
     <div class="wrapper">
       <h2 class="macro__header">Macronutrient Calculator</h2>
       <p>Enter your details to calculate your daily macronutrient needs:</p>
-      
+
       <label for="macro-weight">Weight (kg):</label>
       <input type="number" id="macro-weight" placeholder="Your weight in kg">
 
@@ -500,6 +511,10 @@
   </section>
 
 
+  <br>
+  <br>
+  <br>
+  <br>
   <footer class="footer" id="contact">
     <div class="section__container footer__container">
       <div class="footer__col">
@@ -512,19 +527,19 @@
         </p>
         <ul class="footer__links">
           <li>
-            <a href="#">
+            <a href="https://www.google.com/maps/search/gyms+near+me" target="_blank">
               <span><i class="ri-map-pin-2-fill"></i></span>
               123 Main Street<br />Sunrise Valley, Evergreen Heights
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="tel:+919876543210">
               <span><i class="ri-phone-fill"></i></span>
               +91 9876543210
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="mailto:info@fitphysique.com">
               <span><i class="ri-mail-fill"></i></span>
               info@fitphysique.com
             </a>
@@ -551,11 +566,11 @@
           Don't miss out on the latest news and offers - sign up today and
           join our thriving fitness community!
         </p>
-          <form id="footer__form" onsubmit="sendEmail(); reset(); return false;">
+          <form onsubmit="sendEmail(); reset(); return false;" style="background-color: #0a0a0a;">
             <span id="join">Join</span>
-            <input type="text" id="name" placeholder="Enter Name" />
-            <input type="text" id="email" placeholder="Enter Email" />
-            <input type="text" id="phone" placeholder="Enter Phone no." />
+            <input type="text" id="name" placeholder="Enter Name" style="border: 1px solid #696969;" />
+            <input type="text" id="email" placeholder="Enter Email" style="border: 1px solid #696969;" />
+            <input type="text" id="phone" placeholder="Enter Phone no." style="border: 1px solid #696969;" />
             <textarea id="message" name="message" rows="8" cols="33">Write your message...</textarea>
             <button type="submit" class="btn btn__primary">SEND</button>
           </form>
@@ -570,14 +585,22 @@
       Copyright © 2024 Web Design Mastery. All rights reserved.
     </div>
   </footer>
-  
-  
+
+
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
+
+  <script>
+    document.getElementById('get-started-btn').addEventListener('click', function () {
+      window.location.href = 'login.html'; // Redirect to the login page
+    });
+  </script>
+
+
 </body>
 
 </html>
