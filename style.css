@@ -47,7 +47,7 @@
 }
 
 .btn__primary {
-  background-color: var(--primary-color);
+  background-color: #00ff00;
 }
 
 .btn__primary:hover {
@@ -216,7 +216,7 @@ nav {
 
 .header__container {
   padding-block: 10rem;
-  display: grid;
+  
 }
 
 .header__content h1 {
