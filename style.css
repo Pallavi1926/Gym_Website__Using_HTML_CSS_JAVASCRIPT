@@ -18,6 +18,20 @@
   overflow-x: hidden; 
 }
 
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 3rem;
+  box-shadow: inset 3px 3px 5px #4d4c4c;
+}
+::-webkit-scrollbar-thumb{
+  background: #ee1111;
+  box-shadow: inset 3px 3px 5px #111;
+  border-radius: 3rem;
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -57,11 +71,13 @@
 .btn__secondary {
   background-color: transparent;
   border: 1px solid var(--white);
+  border-radius: 2rem;
 }
 
 .btn__secondary:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+  scale: 1.1;
 }
 
 img {
@@ -304,13 +320,25 @@ nav {
   display: grid;
   width: 100%;
 }
-
+.session_div{
+  display: flex;
+  align-items:center;
+  justify-content: space-evenly;
+}
 .session__card {
-  padding: 5rem 2rem;
+  padding: 8rem;
   text-align: center;
+  border-radius: 4rem;
+  margin: 2rem;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  box-shadow: 10px 10px 15px #ee1111;
+  transition: 0.5s;
+}
+.session__card:hover{
+  box-shadow: -10px -10px 15px #ee1111;
+  scale: 1.02;
 }
 
 .session__card:nth-child(1) {
