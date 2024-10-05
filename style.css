@@ -197,10 +197,17 @@ nav {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+#card_4{
+  margin-bottom: 4rem;
 }
 
 .trainer__card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .nav_style {
@@ -367,6 +374,7 @@ nav {
   margin-top: 4rem;
   display: grid;
   gap: 1rem;
+  
 }
 
 .trainer__card img {
@@ -392,7 +400,20 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  
 }
+
+.trainer__socials > * {
+  border: 3px solid #000; /* Adds a 2px black border around each item */
+  padding: 0.2rem; /* Adds padding inside the border */
+  border-radius: 50%; /* Makes the border rounded (like a circle) */
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.trainer__socials > *:hover {
+  border-color: #007bff; /* Changes the border color on hover */
+}
+
 
 .trainer__socials a {
   font-size: 1.25rem;
