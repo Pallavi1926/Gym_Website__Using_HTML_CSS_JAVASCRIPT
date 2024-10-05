@@ -371,6 +371,14 @@ nav {
 
 .trainer__card img {
   margin-bottom: 1rem;
+  width: 100%; /* Ensure the image covers the width of the card */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.trainer__card:hover img {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+  opacity: 0.9; /* Slightly reduce opacity on hover */
 }
 
 .trainer__card h4 {
@@ -542,8 +550,15 @@ nav {
 }
 
 .blog__card img {
-  margin-bottom: 10px;
+  margin-bottom:10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.blog__card img:hover {
+  transform: scale(1.05); /* Slightly grows the image */
+  opacity: 0.8; /* Makes the image slightly transparent */
+}
+
 
 .blog__card h4 {
   max-width: calc(100% - 1rem);
