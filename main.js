@@ -46,32 +46,90 @@ navLinksItems.forEach((link) => {
   link.addEventListener("click", handleNavigationClick);
 });
 
-// Existing BMI Calculator Logic
+// *******new BMI Calculator Logic********//++++++
+const bmiBtn = document.getElementById("bmiBtn");
+
+  // Function to toggle feet and inches input visibility
+  function toggleInchesInput() {
+    const heightUnit = document.getElementById("height_unit").value;
+    const inchesInput = document.getElementById("inches_input");
+
+    if (heightUnit === "feet_inch") {
+      inchesInput.style.display = "inline";
+      document.getElementById("height").style.display = "none";
+    } else {
+      inchesInput.style.display = "none";
+      document.getElementById("height").style.display = "inline";
+    }
+  }
 bmiBtn.addEventListener("click", () => {
-  const height = parseInt(document.getElementById("height").value);
-  const weight = parseInt(document.getElementById("weight").value);
-  const result = document.getElementById("output");
-  let heightStatus = false,
-    weightStatus = false;
+    console.log("click")
+    const heightUnit = document.getElementById("height_unit").value;
+    let height, feet, inches;
+    
+    // Get height based on unit selected
+    if (heightUnit === "feet_inch") {
+      feet = parseFloat(document.getElementById("feet").value);
+      inches = parseFloat(document.getElementById("inches").value);
+    } else {
+      height = parseFloat(document.getElementById("height").value);
+    }
+    
+    const weight = parseFloat(document.getElementById("weight").value);
+    const weightUnit = document.getElementById("weight_unit").value;
+    const result = document.getElementById("output");
+    let heightStatus = false, weightStatus = false;
 
-  if (height === "" || isNaN(height) || height <= 0) {
-    document.getElementById("height_error").innerHTML =
-      "Please provide a valid height";
-  } else {
-    document.getElementById("height_error").innerHTML = "";
-    heightStatus = true;
-  }
+    // Validate height
+    if (heightUnit === "feet_inch") {
+      if (isNaN(feet) || feet < 0 || isNaN(inches) || inches < 0) {
+        document.getElementById("height_error").innerHTML = "Please provide valid feet and inches";
+      } else {
+        document.getElementById("height_error").innerHTML = "";
+        heightStatus = true;
+      }
+    } else if (isNaN(height) || height <= 0) {
+      document.getElementById("height_error").innerHTML = "Please provide a valid height";
+    } else {
+      document.getElementById("height_error").innerHTML = "";
+      heightStatus = true;
+    }
 
-  if (weight === "" || isNaN(weight) || weight <= 0) {
-    document.getElementById("weight_error").innerHTML =
-      "Please provide a valid weight";
-  } else {
-    document.getElementById("weight_error").innerHTML = "";
-    weightStatus = true;
-  }
+    // Validate weight
+    if (isNaN(weight) || weight <= 0) {
+      document.getElementById("weight_error").innerHTML = "Please provide a valid weight";
+    } else {
+      document.getElementById("weight_error").innerHTML = "";
+      weightStatus = true;
+    }
 
-  if (heightStatus && weightStatus) {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    // If both height and weight are valid
+    if (heightStatus && weightStatus) {
+      let heightInMeters;
+
+      // Convert height to meters based on selected unit
+      if (heightUnit === "cm") {
+        heightInMeters = height / 100;
+      } else if (heightUnit === "meters") {
+        heightInMeters = height;
+      } else if (heightUnit === "yards") {
+        heightInMeters = height * 0.9144;
+      } else if (heightUnit === "feet_inch") {
+        heightInMeters = (feet * 0.3048) + (inches * 0.0254);
+      }
+
+      // Convert weight to kilograms based on selected unit
+      let weightInKg;
+      if (weightUnit === "kg") {
+        weightInKg = weight;
+      } else if (weightUnit === "lbs") {
+        weightInKg = weight * 0.453592;
+      } else if (weightUnit === "st") {
+        weightInKg = weight * 6.35029;
+      }
+
+      // Calculate BMI
+      const bmi = (weightInKg / (heightInMeters * heightInMeters)).toFixed(2);
 
     if (bmi < 18.6) {
       result.innerHTML = "Underweight: " + bmi;
@@ -82,10 +140,9 @@ bmiBtn.addEventListener("click", () => {
     }
   } else {
     alert("The form has errors");
-    result.innerHTML = "";
+    result.innerHTML = ' ';
   }
-});
-
+})
 // Add Protein Intake Calculator Logic
 document.getElementById("protein-btn").addEventListener("click", function () {
   let weight = parseFloat(document.getElementById("protein-weight").value);

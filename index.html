@@ -445,21 +445,43 @@
   </section>
 
   <section class="section__container bmi__container">
-
     <div class="wrapper">
-      <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
-      </p>
+        <h2 class="bmi__header">BMI CALCULATOR</h2>
+        
+        <p>
+            Height: 
+            <input type="text" id="height" placeholder="Enter height">
+            <select id="height_unit" onchange="toggleInchesInput()">
+                <option value="cm">cm</option>
+                <option value="meters">meters</option>
+                <option value="yards">yards</option>
+                <option value="feet_inch">feet and inches</option>
+            </select>
+            <span id="inches_input" style="display:none;">
+                Feet: <input type="text" id="feet" placeholder="Feet">
+                Inches: <input type="text" id="inches" placeholder="Inches">
+            </span>
+            <br>
+            <span id="height_error"></span>
+        </p>
 
-      <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
-      </p>
+        <p>
+            Weight: 
+            <input type="text" id="weight" placeholder="Enter weight">
+            <select id="weight_unit">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>f
+                <option value="st">stones</option>
+            </select>
+            <br>
+            <span id="weight_error"></span>
+        </p>
 
-      <button class="btn" id="btn">Calculate</button>
-      <p id="output"></p>
+        <button class="btn" id="bmiBtn">Calculate</button>
+        <p id="output"></p>
     </div>
   </section>
+
 
   <!-- Protein Intake Calculator -->
   <section class="section__container protein__container">
