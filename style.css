@@ -672,7 +672,7 @@ textarea:hover{
 }
 
 .btn__primary {
-  padding: 20px;
+  padding: 12px;
   background-color: #d44f3b;
   color: white;
   border: 2px black solid;
@@ -788,6 +788,30 @@ url("assets/banner-2.png");
   background-color: #5b5757;
 }
 
+.buttondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.buttondiv button {
+  width: 20%;
+}
+
+.div1 {
+  margin-top: 40px;
+}
+
+.div1 input {
+  color: white;
+  text-align: left;
+}
+
+#name, #email, #phone{
+  margin-top: 10px;
+}
 
 .footer {
   background-color: var(--text-dark);
@@ -835,8 +859,13 @@ url("assets/banner-2.png");
   color: var(--white);
 }
 
+.galleryHeading {
+  margin-left: 3rem;
+}
+
 .gallery__grid {
   max-width: 275px;
+  margin-left: 3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -879,8 +908,9 @@ url("assets/banner-2.png");
 }
 
 .footer__socials {
-  margin-top: 50px;
-  justify-content: center;
+  margin-top: 10px;
+  margin-left: 40px;
+  justify-content: left;
   display: flex;
   align-items: center;
   padding-top: 1.1rem;
