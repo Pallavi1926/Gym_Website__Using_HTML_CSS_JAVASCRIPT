@@ -142,7 +142,7 @@
       <div class="trainer__card">
         <img src="assets/trainer-2.jpg" alt="trainer" />
         <h4>ROSY RIVERA</h4>
-        <p>Cardio Coach</p>
+        <p>MMA Coach</p>
         <div class="trainer__socials">
           <a href="#"><i class="ri-facebook-fill"></i></a>
           <a href="#"><i class="ri-twitter-x-fill"></i></a>
@@ -317,8 +317,9 @@
             </div>
           </div>
         </section>
+        <!-- Fixed Duplication Here -->
 
-        <footer class="footer" id="contact">
+        <!-- <footer class="footer" id="contact">
           <div class="section__container footer__container">
             <div class="footer__col">
               <div class="footer__logo">
@@ -381,13 +382,14 @@
                 <a href="#"><i class="ri-youtube-fill"></i></a>
               </div>
             </div>
-        </div>
-        <div class="swiper-pagination">
+          </div>
+        </footer> -->
+          <div class="swiper-pagination">
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet"></span>
             <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+          </div>
         </div>
-      </div>
     </section>
     
     
@@ -549,7 +551,7 @@
           Don't miss out on the latest news and offers - sign up today and
           join our thriving fitness community!
         </p>
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form id="footer__form" onsubmit="sendEmail(); reset(); return false;">
             <span id="join">Join</span>
             <input type="text" id="name" placeholder="Enter Name" />
             <input type="text" id="email" placeholder="Enter Email" />
