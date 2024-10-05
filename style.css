@@ -12,6 +12,7 @@
 }
 
 * {
+  margin: 0;
   padding: 0;
   box-sizing: border-box; 
   margin: auto;
@@ -19,7 +20,8 @@
 }
 
 .section__container {
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
+  width: 100%;
   margin: auto;
   padding: 5rem 1rem;
 }
@@ -602,8 +604,13 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+<<<<<<< HEAD
+  gap: 1.5rem;
+  width: 60%;
+=======
   gap: 1 rem;
   width: 100%;
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
   
   background: white;
   border-radius: 5px;
@@ -631,13 +638,14 @@ url("assets/banner-2.png");
 }
 
 #join {
-  background-color: #dc030a;
+  /* background-color: #dc030a; */
   width: 5rem;
   text-align: center;
   margin-top: 0.5rem;
   border-radius: 8%;
-  color: white;
+  color: #dc030a;
   font-weight: 700;
+  font-size: 20px;
 }
 
 input[type="text"] {
@@ -718,8 +726,13 @@ textarea:hover{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+<<<<<<< HEAD
+  gap: 1.5rem;
+  width: 60%;
+=======
   gap: 1 rem;
   width: 100%;
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
   
   background: white;
   border-radius: 5px;
@@ -755,7 +768,7 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  /* height:400px; */
   background: white;
   
   
@@ -767,8 +780,13 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   flex-direction: column;
+<<<<<<< HEAD
+  gap: 1.5rem;
+  width: 60%;
+=======
   gap: 1 rem;
   width: 100%;
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
   
   background: white;
   border-radius: 5px;
@@ -857,6 +875,7 @@ url("assets/banner-2.png");
 }
 
 .footer__col input {
+  background-color: #0a0a0a;
   width: 100%;
   padding-inline: 1rem;
   padding-top: 0.8rem;
@@ -876,6 +895,10 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   
+}
+
+#message {
+  background-color: #151515;
 }
 
 .footer__socials {
@@ -907,6 +930,21 @@ url("assets/banner-2.png");
   text-align: center;
 }
 
+<<<<<<< HEAD
+#client {
+  padding: 80px 0 5px 0;
+}
+
+#footer__form {
+  background-color: #0a0a0a;
+
+}
+
+
+
+
+=======
+>>>>>>> b8bd453f4604a6d26ec5133b705bf99dbe51574c
 @media (width > 540px) {
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
