@@ -7,14 +7,16 @@
   --text-light: #737373;
   --extra-light: #e5e5e5;
   --white: #ffffff;
-  --max-width: 1200px;
+  --max-width: 1400px;
   --header-font: "Oswald", sans-serif;
 }
 
 * {
   padding: 0;
+
   margin: 0;
   box-sizing: border-box;
+
 }
 
 .section__container {
@@ -86,24 +88,20 @@ nav {
   background-color: var(--text-dark);
   position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 100;
 }
 
 .nav__bar {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
-}
-
-.nav__header {
-  padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--text-dark);
+  color: white;
 }
 
 .nav__logo img {
+
   max-width: 100px;
 }
 
@@ -121,30 +119,75 @@ nav {
   padding: 2rem;
   list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   gap: 2rem;
-  background-color: var(--text-dark);
-  transition: 0.5s;
-  z-index: -1;
-  transform: translateY(-100%); /*IMP*/
 }
 
-.nav__links.open {
-  transform: translateY(0);
+.nav__links li {
+  display: inline;
+  position: relative; /* Ensure the hover line is positioned relative to each link */
 }
+
 
 .nav__links a {
   font-size: 1rem;
+
   font-family: var(--header-font);
   white-space: nowrap;
   color: var(--white);
-  transition: 0.3s;
 }
 
-.nav__links a:hover {
-  color: var(--primary-color);
+/* Hover effect: Red line under link */
+.nav__links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.05s ease;
+}
+
+.nav__links li a:hover::after {
+  width: 100%; /* Line expands on hover */
+}
+
+.nav__links li a:hover {
+  color: white; /* Text remains white on hover */
+}
+
+.nav__links li.active a {
+  color: red; /* Red color for the active link */
+}
+
+.nav__links li.active a::after {
+  display: none; 
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__links i {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--text-dark);
+}
+
+.nav__bar {
+  gap: 10rem;
 }
 
 .header {
@@ -153,10 +196,11 @@ nav {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.8)
     ),
-    url("assets/header.jpg");
+    url("assets/lean-man-doing-lateral-raises.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-top: 60px;
 }
 
 /* card hover effect */
@@ -169,6 +213,17 @@ nav {
 
 .trainer__card:hover {
   transform: scale(1.1);
+}
+
+.nav_style {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.nav_style:hover {
+  transform: scale(1.5);
 }
 
 .header__container {
@@ -267,6 +322,7 @@ nav {
 
 .session {
   display: grid;
+  width: 100%;
 }
 
 .session__card {
@@ -568,7 +624,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
 
   background: white;
@@ -584,8 +640,10 @@ nav {
 .bmi__container input {
   outline: none;
 }
+
 .bmi__container .btn {
   color: #5b5757;
+
 }
 
 form {
@@ -655,7 +713,7 @@ input[type="text"]:hover, input[type="text"]:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
 
   background: white;
@@ -671,8 +729,10 @@ input[type="text"]:hover, input[type="text"]:focus {
 .protein__container input {
   outline: none;
 }
+
 .protein__container .btn {
   color: #5b5757;
+
 }
 
 .macro__header {
@@ -699,7 +759,7 @@ input[type="text"]:hover, input[type="text"]:focus {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1 rem;
   width: 100%;
 
   background: black;
@@ -715,22 +775,24 @@ input[type="text"]:hover, input[type="text"]:focus {
 .macro__container input {
   outline: none;
 }
+
 .macro__container .btn {
   color: #5b5757;
+
 }
 
 .footer {
   background-color: var(--text-dark);
-}
-
+  width: 100%;
 .footer__container {
   display: grid;
   gap: 4rem 2rem;
+  width: 100%;
 }
 
 .footer__logo img {
   margin-bottom: 1rem;
-  max-width: 120px;
+  max-width: 100vw;
 }
 
 .footer__col p {
@@ -896,6 +958,7 @@ input[type="text"]:hover, input[type="text"]:focus {
     z-index: 1;
   }
 
+
   .header__container {
     padding-block: 12rem;
     grid-template-columns: repeat(2, 1fr);
@@ -960,5 +1023,71 @@ input[type="text"]:hover, input[type="text"]:focus {
 
   .membership__card {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 5px;
+  }
+}
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .nav__menu__btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+  }
+
+  .nav__links {
+    position: fixed;
+    top: 0; 
+    right: -100%;
+    height: 100vh; 
+    width: 200px;
+    background-color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.3s ease;
+    margin: 0; 
+    padding: 0;
+  }
+
+  .nav__links li {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .nav__links li a {
+    font-size: 18px;
+    padding: 0.2rem 0;
+    display: block;
+  }
+
+  .nav__links i {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .nav__links.open {
+    right: 0;
+  }
+
+  .nav__logo {
+    display: block;
+    margin-right: 200px;
   }
 }
