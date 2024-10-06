@@ -22,7 +22,6 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         isValid = false;
         showError("email", "Please enter a valid email address.");
     }
-
     // Session validation
     if (session === "") {
         isValid = false;
