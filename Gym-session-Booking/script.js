@@ -29,4 +29,12 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         showError("session", "Please select a session.");
     }
 
-  
+   // Date validation
+   const currentDate = new Date();
+   const selectedDate = new Date(date);
+   if (selectedDate <= currentDate) {
+       isValid = false;
+       showError("date", "Please select a future date for the session.");
+   }
+
+ 
