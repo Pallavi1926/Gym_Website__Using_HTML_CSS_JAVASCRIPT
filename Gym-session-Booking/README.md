@@ -29,6 +29,7 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
    ```bash
    cd https://github.com/ArpitaAgrahari/Gym_Website__Using_HTML_CSS_JAVASCRIPT.git
 ```
+
 3. Open the `index.html` file in a web browser to view and interact with the Online Gym Session Booking form.
 
 4. Usage
