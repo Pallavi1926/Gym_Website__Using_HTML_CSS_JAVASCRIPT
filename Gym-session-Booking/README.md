@@ -25,7 +25,8 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
    git clone https://github.com/ArpitaAgrahari/Gym_Website__Using_HTML_CSS_JAVASCRIPT.git
 ```
 
-2. Navigate to the project directory:
+2.  Navigate to the project directory:
+
    ```bash
    cd https://github.com/ArpitaAgrahari/Gym_Website__Using_HTML_CSS_JAVASCRIPT.git
 ```
