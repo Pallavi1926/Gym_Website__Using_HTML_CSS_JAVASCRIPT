@@ -7,7 +7,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     const date = document.getElementById('date').value;
     const time = document.getElementById('time').value;
 
-    // Basic form validation
+
     let isValid = true;
 
     // Name validation
