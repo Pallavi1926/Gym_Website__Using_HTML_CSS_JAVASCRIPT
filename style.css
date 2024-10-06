@@ -43,8 +43,7 @@
   color: var(--white);
   border-radius: 2px;
   transition: 0.3s;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .btn__primary {
   background-color: var(--primary-color);
@@ -72,6 +71,7 @@ img {
 a {
   text-decoration: none;
   transition: 0.3s;
+  
 }
 
 html,
@@ -225,6 +225,7 @@ nav {
   font-family: var(--header-font);
   line-height: 5rem;
   color: var(--primary-color);
+  overflow:hidden;
 }
 
 .header__content h2 {
@@ -234,6 +235,7 @@ nav {
   font-family: var(--header-font);
   line-height: 3rem;
   color: var(--white);
+  overflow: hidden;
 }
 
 .header__content p {
@@ -244,7 +246,7 @@ nav {
 .about__header {
   text-align: center;
   display: grid;
-  gap: 1rem;
+  gap: 1rem; 
 }
 
 .about__header .section__header {
@@ -271,6 +273,7 @@ nav {
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
+  overflow: hidden;
 }
 
 .about__card h4::before {
@@ -279,8 +282,8 @@ nav {
   left: 0;
   font-size: 6rem;
   line-height: 6rem;
-  color: var(--text-dark);
-  opacity: 0.1;
+  color: #ff0008;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -366,7 +369,7 @@ nav {
 .trainer__grid {
   margin-top: 4rem;
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .trainer__card img {
@@ -423,7 +426,7 @@ nav {
 
 .membership__card {
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(158, 147, 147, 0.6);
   transition: 0.3s;
 }
 
@@ -621,6 +624,7 @@ url("assets/banner-2.png");
 .bmi__container .btn{
   color:whitesmoke;
   background-color: #5b5757;
+  margin: 3px;
 }
 
  form {
@@ -638,6 +642,7 @@ url("assets/banner-2.png");
   border-radius: 8%;
   color: white;
   font-weight: 700;
+  overflow: hidden;
 }
 
 input[type="text"] {
@@ -681,6 +686,7 @@ textarea:hover{
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 0.3rem;
+  overflow: hidden;
 }
 
 
@@ -737,6 +743,7 @@ url("assets/banner-2.png");
 .protein__container .btn{
   color:whitesmoke;
   background-color: #5b5757;
+  margin: 3px;
 }
 
 
@@ -757,6 +764,7 @@ url("assets/banner-2.png");
   width: 100%;
   height:400px;
   background: white;
+
   
   
  
@@ -786,6 +794,7 @@ url("assets/banner-2.png");
 .macro__container .btn{
   color:whitesmoke;
   background-color: #5b5757;
+  margin: 3px;
 }
 
 
@@ -875,6 +884,7 @@ url("assets/banner-2.png");
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3px;
   
 }
 
