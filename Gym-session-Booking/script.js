@@ -57,3 +57,16 @@ if (isValid) {
 }
 });
 
+function showError(inputId, message) {
+    const inputField = document.getElementById(inputId);
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message';
+    errorMessage.innerText = message;
+    inputField.parentElement.appendChild(errorMessage);
+    }
+    
+    function clearErrors() {
+    const errors = document.querySelectorAll('.error-message');
+    errors.forEach(error => error.remove());
+    }
+    
