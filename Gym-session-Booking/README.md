@@ -23,3 +23,5 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 1. Clone the repository:
    ```bash
    git clone <repository-url>
+```
+
