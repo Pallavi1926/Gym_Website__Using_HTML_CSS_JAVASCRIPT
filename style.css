@@ -12,7 +12,7 @@
 }
 
 * {
-  padding: 0;
+  padding: 10;
   box-sizing: border-box; 
   margin: auto;
   overflow-x: hidden; 
@@ -41,7 +41,7 @@
   outline: none;
   border: none;
   color: var(--white);
-  border-radius: 2px;
+  border-radius: 3px;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -620,7 +620,7 @@ url("assets/banner-2.png");
 }
 .bmi__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: rgb(135,6,12);
 }
 
  form {
@@ -736,7 +736,7 @@ url("assets/banner-2.png");
 }
 .protein__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: rgb(135,6,12);
 }
 
 
@@ -785,7 +785,7 @@ url("assets/banner-2.png");
 }
 .macro__container .btn{
   color:whitesmoke;
-  background-color: #5b5757;
+  background-color: rgb(135,6,12);
 }
 
 
