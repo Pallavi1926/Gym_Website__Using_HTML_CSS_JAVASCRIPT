@@ -43,3 +43,17 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     showError("time", "Please select a preferred time.");
 }
 
+if (isValid) {
+    // Save to localStorage (optional)
+    localStorage.setItem('gymBooking', JSON.stringify({ name, email, session, date, time }));
+
+    // Show a confirmation message
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    confirmationMessage.innerHTML = `Thank you, ${name}! Your <strong>${session}</strong> session is booked for <strong>${date}</strong> at <strong>${time}</strong>.`;
+    confirmationMessage.style.display = 'block';
+
+    // Clear the form
+    document.getElementById('bookingForm').reset();
+}
+});
+
