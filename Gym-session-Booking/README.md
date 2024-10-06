@@ -49,7 +49,7 @@ Contributions are welcome! If you have suggestions for improvements or want to a
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgements
+## Acknowledgements
 Inspired by the need for efficient gym management solutions.
 Special thanks to the contributors and mentors who provided guidance.
 vbnet
