@@ -25,3 +25,20 @@ h1 {
 }
 
 /* Booking Form Section */
+.booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+}
+
