@@ -38,7 +38,7 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 -  Provide a valid email address.
 -  Select the type of session from the dropdown menu.
 -  Choose a future date and preferred time for the session.
-Submit the form.
+2. Submit the form.
 Upon successful submission, a confirmation message will appear. Any errors will be displayed below the relevant fields for correction.
 Contribution
 Contributions are welcome! If you have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
