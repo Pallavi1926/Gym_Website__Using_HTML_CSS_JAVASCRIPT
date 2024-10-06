@@ -42,3 +42,28 @@ h1 {
     width: 100%;
 }
 
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
