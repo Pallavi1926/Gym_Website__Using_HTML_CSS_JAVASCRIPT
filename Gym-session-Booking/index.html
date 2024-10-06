@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Session Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Book Your Gym Session</h1>
+    </header>
+    <section class="booking-section">
+        <div class="form-container">
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="session">Choose Session</label>
+                    <select id="session" name="session" required>
+                        <option value="" disabled selected>Select a session</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="weightlifting">Weightlifting</option>
+                        <option value="cardio">Cardio</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" id="submitButton">Book Session</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="confirmation" id="confirmationMessage"></div>
+
+    <footer>
+        <p>&copy; 2024 Gym Session Booking. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
