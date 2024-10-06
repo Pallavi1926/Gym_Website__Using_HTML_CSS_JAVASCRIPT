@@ -22,7 +22,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
         isValid = false;
         showError("email", "Please enter a valid email address.");
     }
-    
+
     // Session validation
     if (session === "") {
         isValid = false;
@@ -69,4 +69,4 @@ function showError(inputId, message) {
     const errors = document.querySelectorAll('.error-message');
     errors.forEach(error => error.remove());
     }
-    
+    //end of code
