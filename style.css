@@ -9,6 +9,8 @@
   --white: #ffffff;
   --max-width: 1400px;
   --header-font: "Oswald", sans-serif;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --hover-border: #c1406b;
 }
 
 * {
@@ -196,7 +198,7 @@ nav {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 .trainer__card:hover {
@@ -207,7 +209,7 @@ nav {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 .nav_style:hover {
@@ -652,7 +654,7 @@ input[type="text"] {
 
 
 input[type="text"]:hover, input[type="text"]:focus {
-  border-color: #c1406b;
+  border-color: var(--hover-border);
   box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
   outline: none;
 }
@@ -792,8 +794,11 @@ url("assets/banner-2.png");
 .footer {
   background-color: var(--text-dark);
   width: 100%;
+}
+
 .footer__container {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 4rem 2rem;
   width: 100%;
 }
@@ -805,7 +810,10 @@ url("assets/banner-2.png");
 
 .footer__col p {
   color: var(--text-light);
+  font-size: 1rem;  /* here i give font-size and line height in text */
+  line-height: 1.5;
 }
+
 
 .footer__links {
   list-style: none;
@@ -844,6 +852,7 @@ url("assets/banner-2.png");
 
 .footer__col form {
   margin-bottom: 1rem;
+  margin-top: 1rem; /* add margin top*/
   width: 100%;
   max-width: 400px;
   height: 23.7rem;
@@ -854,6 +863,12 @@ url("assets/banner-2.png");
   background-color: var(--white);
   border-radius: 2px;
   
+}
+
+.footer__col form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .footer__col input {
@@ -875,11 +890,12 @@ url("assets/banner-2.png");
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
   
 }
 
 .footer__socials {
-  margin-top: 50px;
+  /* margin-top: 50px; remove margin top for better visual  */
   justify-content: center;
   display: flex;
   align-items: center;
@@ -1009,7 +1025,7 @@ url("assets/banner-2.png");
     padding: 5px;
   }
 }
-}
+
 
 @media (max-width: 768px) {
   nav {
