@@ -582,7 +582,7 @@ nav {
 }
 
 .bmi__container span{
-  color: red;
+  color: rgb(218, 21, 21);
 }
 .bmi__container{
   display: flex;
@@ -590,8 +590,8 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
-  background: white;
+  /* height:400px; */
+  background: rgb(252, 248, 248);
   
   
  
@@ -616,11 +616,31 @@ nav {
 url("assets/banner-2.png");
 }
 .bmi__container input{
+  /* outline: none; */
+  outline: #702020;
+  height: 30px;
+  font-size: 20px;
+
+}
+.bmi__container .wrapper #gender{
+  border-radius: 5px;
+  height: 30px;
+  width: 220px;
   outline: none;
+}
+.bmi__container .wrapper .gender{
+  margin: 9px;
+
 }
 .bmi__container .btn{
   color:whitesmoke;
   background-color: #5b5757;
+  margin-bottom: 2px;
+  border-radius: 6px;
+  padding: ;
+}
+.bmi__container .btn:hover{
+  background-color: #423a3a;
 }
 
  form {

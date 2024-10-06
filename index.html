@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="http://127.0.0.1:5500/assets/logo.png">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -448,11 +448,20 @@
 
     <div class="wrapper">
       <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
+      <div class="gender">
+      <label for="gender">Select Gender:&nbsp; </label>
+      <select name="gender" id="gender" >
+        <option value="">Select your gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="others">Others</option>
+      </select>
+    </div>
+      <p>Height in CM :&nbsp;&nbsp;&nbsp;
         <input type="text" id="height"><br><span id="height_error"></span>
       </p>
 
-      <p>Weight in KG:
+      <p>Weight in KG:&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="text" id="weight"><br><span id="weight_error"></span>
       </p>
 
