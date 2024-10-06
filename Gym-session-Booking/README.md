@@ -22,6 +22,7 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ArpitaAgrahari/Gym_Website__Using_HTML_CSS_JAVASCRIPT.git
 ```
+
 
