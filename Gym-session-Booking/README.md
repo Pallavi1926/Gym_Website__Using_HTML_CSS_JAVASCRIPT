@@ -33,11 +33,11 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 3. Open the `index.html` file in a web browser to view and interact with the Online Gym Session Booking form.
 
 4. Usage
--  Fill out the booking form with your details:
+1. Fill out the booking form with your details:
 -  Enter your full name.
 -  Provide a valid email address.
 -  Select the type of session from the dropdown menu.
-Choose a future date and preferred time for the session.
+-  Choose a future date and preferred time for the session.
 Submit the form.
 Upon successful submission, a confirmation message will appear. Any errors will be displayed below the relevant fields for correction.
 Contribution
