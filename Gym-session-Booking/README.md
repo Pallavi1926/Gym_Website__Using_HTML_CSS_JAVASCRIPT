@@ -31,7 +31,8 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 ```
 
 3. Open the `index.html` file in a web browser to view and interact with the Online Gym Session Booking form.
-Usage
+
+4. Usage
 Fill out the booking form with your details:
 Enter your full name.
 Provide a valid email address.
