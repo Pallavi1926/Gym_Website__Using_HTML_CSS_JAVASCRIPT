@@ -12,3 +12,16 @@ body {
 }
 
 /* Header Styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-weight: 600;
+}
+
+/* Booking Form Section */
