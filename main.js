@@ -2,7 +2,6 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
-const bmiBtn = document.getElementById("btn");
 
 menuBtn.addEventListener("click", (e) => {
     navLinks.classList.toggle("open");
@@ -37,42 +36,8 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-// Existing BMI Calculator Logic
-bmiBtn.addEventListener("click", () => {
-    const height = parseInt(document.getElementById("height").value);
-    const weight = parseInt(document.getElementById("weight").value);
-    const result = document.getElementById("output");
-    let heightStatus = false, weightStatus = false;
 
-    if (height === '' || isNaN(height) || height <= 0) {
-        document.getElementById('height_error').innerHTML = 'Please provide a valid height';
-    } else {
-        document.getElementById('height_error').innerHTML = '';
-        heightStatus = true;
-    }
 
-    if (weight === '' || isNaN(weight) || weight <= 0) {
-        document.getElementById('weight_error').innerHTML = 'Please provide a valid weight';
-    } else {
-        document.getElementById('weight_error').innerHTML = '';
-        weightStatus = true;
-    }
-
-    if (heightStatus && weightStatus) {
-        const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-
-        if (bmi < 18.6) {
-            result.innerHTML = 'Underweight: ' + bmi;
-        } else if (bmi > 24.9) {
-            result.innerHTML = 'Overweight: ' + bmi;
-        } else {
-            result.innerHTML = 'Normal: ' + bmi;
-        }
-    } else {
-        alert('The form has errors');
-        result.innerHTML = '';
-    }
-});
 
 // Add Protein Intake Calculator Logic
 document.getElementById("protein-btn").addEventListener("click", function() {

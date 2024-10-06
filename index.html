@@ -439,24 +439,58 @@
       </div>
     </div>
   </section>
-
-  <section class="section__container bmi__container">
-
+  
+<!-- BMI calculator --> 
+<section class="bmi-body">
+<div class="container">
+  
     <div class="wrapper">
-      <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
-      </p>
+  
+      <h1 class="tag">BMI Calculator</h1>
+      
+      <form id="bmiForm">
+          <div class="form-group">
+              <label for="gender">Gender:</label>
+              <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="age">Age Group:</label>
+              <select id="age" name="age" required>
+                  <option value="" disabled selected>Enter your Age</option>
+                  <option value="child">0-12</option>
+                  <option value="teen">13-19</option>
+                  <option value="adult">20-64</option>
+                  <option value="senior">65+</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="height">Height (cm):</label>
+              <input type="number" id="height" name="height" placeholder="Enter your height" required>
+          </div>
+          <div class="form-group">
+              <label for="weight">Weight (kg):</label>
+              <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+          </div>
+          <button type="button" onclick="calculateBMI()">Calculate</button>
+          
+          <button type="button" onclick="Refresh()">Refresh</button>
 
-      <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
-      </p>
-
-      <button class="btn" id="btn">Calculate</button>
-      <p id="output"></p>
-    </div>
-  </section>
-
+          <P>This BMI calculator is for informational purposes only. 
+            Consult a healthcare provider before making health decisions. </P>
+      </form>
+     
+      <div id="result"></div>
+  
+  </div>
+  
+ 
+</div>
+</section>
+  
   <!-- Protein Intake Calculator -->
   <section class="section__container protein__container">
     <div class="wrapper">
@@ -476,6 +510,7 @@
       <button class="btn" id="protein-btn">Calculate Protein Intake</button>
       <p id="protein-output"></p>
     </div>
+    
   </section>
 
   <!-- Macronutrient Calculator -->
@@ -574,13 +609,12 @@
     </div>
   </footer>
   
-  
-
+  <script src="bmi.js"></script>
+  <script src="main.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="main.js"></script>
 
   <script>
   document.getElementById('get-started-btn').addEventListener('click', function() {
@@ -590,5 +624,5 @@
 
 
 </body>
-
 </html>
+
