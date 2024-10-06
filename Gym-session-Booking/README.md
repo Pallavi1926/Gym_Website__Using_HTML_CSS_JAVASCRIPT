@@ -52,15 +52,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgements
 Inspired by the need for efficient gym management solutions.
 Special thanks to the contributors and mentors who provided guidance.
-vbnet
-Copy code
 
-### How to Use the README
-- Replace `<repository-url>` and `<project-directory>` with the appropriate links or names for your project.
-- Ensure that the technologies and other details accurately reflect your project's specifics.
-- Adjust any sections as needed based on your project's scope and features. 
-
-This README provides a clear and comprehensive overview of your project, making it easy for users and contributors to understand its purpose, usage, and contribution guidelines.
 
 
 
