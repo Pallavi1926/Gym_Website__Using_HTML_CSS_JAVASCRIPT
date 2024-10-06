@@ -46,7 +46,7 @@ The **Online Gym Session Booking** feature allows users to book gym sessions con
 
 Contributions are welcome! If you have suggestions for improvements or want to add new features, please open an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgements
