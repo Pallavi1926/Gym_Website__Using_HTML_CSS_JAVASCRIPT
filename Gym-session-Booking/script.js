@@ -37,4 +37,9 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
        showError("date", "Please select a future date for the session.");
    }
 
- 
+   // Time validation
+   if (time === "") {
+    isValid = false;
+    showError("time", "Please select a preferred time.");
+}
+
