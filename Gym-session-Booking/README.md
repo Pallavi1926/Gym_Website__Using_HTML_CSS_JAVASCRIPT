@@ -50,8 +50,8 @@ Contributions are welcome! If you have suggestions for improvements or want to a
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
-Inspired by the need for efficient gym management solutions.
-Special thanks to the contributors and mentors who provided guidance.
+-  Inspired by the need for efficient gym management solutions.
+-  Special thanks to the contributors and mentors who provided guidance.
 
 
 
