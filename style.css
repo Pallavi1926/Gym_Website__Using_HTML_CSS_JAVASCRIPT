@@ -438,45 +438,76 @@ nav {
   color: var(--extra-light);
 }
 
+/* Grid layout for trainers */
 .trainer__grid {
   margin-top: 4rem;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Increased gap for better spacing */
+}
+
+/* Trainer card styles with default gradient background */
+.trainer__card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Default gradient */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease; /* Transition for hover */
+}
+
+/* Hover effect with new gradient */
+.trainer__card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, #ff9966, #ff5e62); /* New gradient background on hover */
 }
 
 .trainer__card img {
   margin-bottom: 1rem;
+  border-radius: 50%; /* Circular images */
+  width: 100px; /* Restrict size for uniformity */
+  height: 100px;
+  object-fit: cover; /* Crop image for better presentation */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .trainer__card h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.6rem; /* Slightly bigger text for prominence */
+  font-weight: 600;
   font-family: var(--header-font);
-  color: var(--text-dark);
+  color: #fff; /* White text for better contrast against gradient background */
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .trainer__card p {
-  margin-bottom: 1rem;
-  color: var(--text-light);
+  margin-bottom: 1.5rem; /* Slightly more space for breathing room */
+  color: #e0e0e0; /* Lighter color for the text */
   text-align: center;
+  line-height: 1.6; /* Improved readability */
 }
 
+/* Social icons styling */
 .trainer__socials {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Wider gap between icons */
 }
 
 .trainer__socials a {
-  font-size: 1.25rem;
-  color: var(--text-light);
+  font-size: 1.5rem; /* Larger icons */
+  color: #e0e0e0; /* Lighter color for social icons */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .trainer__socials a:hover {
-  color: var(--primary-color);
+  color: #fff; /* Change color to white on hover */
+  transform: scale(1.2); /* Enlarge icon on hover */
 }
+
 
 .membership {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
