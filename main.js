@@ -16,6 +16,12 @@ if (closeIcon) {
     menuBtn.setAttribute("aria-expanded", "false");
   });
 }
+function openmenu(){
+	sidemenu.style.right = "0";
+}
+function closemenu(){
+	sidemenu.style.right = "-200px";
+}
 
 /*---------------------Navigation Active Link & Smooth Scroll-------------------------*/
 function handleNavigationClick(event) {
