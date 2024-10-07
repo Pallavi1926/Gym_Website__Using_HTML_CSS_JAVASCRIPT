@@ -88,6 +88,7 @@ body {
 .remember-forgot a:hover {
   text-decoration: underline; /* Hover effect */
   color: #000000; /* Change color on hover if desired */
+
 }
 
 /* Styles for showing and hiding passwords */
