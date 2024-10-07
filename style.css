@@ -16,6 +16,7 @@
   box-sizing: border-box; 
   margin: auto;
   overflow-x: hidden; 
+  scroll-snap-type: none;
 }
 
 .section__container {
@@ -254,6 +255,7 @@ nav {
 .about__header .section__description {
   max-width: 350px;
   margin-inline: auto;
+  height: auto;
 }
 
 .about__grid {
@@ -331,6 +333,17 @@ nav {
 .session__card:nth-child(4) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("assets/session-4.jpg");
+}
+
+/* added two more sections for more features */
+.session__card:nth-child(5) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("assets/session-5.jpg");
+}
+
+.session__card:nth-child(6) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("assets/session-6.jpg");
 }
 
 .session__card h4 {
@@ -490,6 +503,7 @@ nav {
   max-width: 600px;
   margin-inline: auto;
   text-align: center;
+  background-color: var(--white);
 }
 
 .client__card img {
@@ -503,13 +517,13 @@ nav {
 .client__card > div {
   font-size: 2rem;
   line-height: 2rem;
-  color: var(--text-light);
+  color: var(--text-dark);
   opacity: 0.5;
 }
 
 .client__card p {
   margin-bottom: 1rem;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .client__card h4 {
@@ -589,8 +603,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height:400px;
+  width: 50%;
+  height:500px;
   background: white;
   
   
@@ -648,6 +662,7 @@ input[type="text"] {
   font-size: 16px;
   font-family: Arial, sans-serif;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 30px;
 }
 
 
@@ -719,7 +734,8 @@ textarea:hover{
   align-items: center;
   flex-direction: column;
   gap: 1 rem;
-  width: 100%;
+  width: 50%;
+  height: auto;
   
   background: white;
   border-radius: 5px;
@@ -755,7 +771,7 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height:500px;
   background: white;
   
   
@@ -768,7 +784,7 @@ url("assets/banner-2.png");
   align-items: center;
   flex-direction: column;
   gap: 1 rem;
-  width: 100%;
+  width: 50%;
   
   background: white;
   border-radius: 5px;
@@ -796,6 +812,7 @@ url("assets/banner-2.png");
   display: grid;
   gap: 4rem 2rem;
   width: 100%;
+  background-color: var(--text-dark);
 }
 
 .footer__logo img {

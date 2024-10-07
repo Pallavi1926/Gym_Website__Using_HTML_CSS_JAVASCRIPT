@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+<!-- Nav bar begins -->
   <nav>
     <div class="nav__bar">
       <div class="nav__header">
@@ -36,8 +36,9 @@
       </ul>
     </div>
   </nav>
+<!-- Nav bar ends -->
 
-
+<!-- Hero section starts -->
   <header class="header" id="header">
     <div class="section__container header__container">
       <div class="header__content">
@@ -57,7 +58,9 @@
       </div>
     </div>
   </header>
+<!-- Hero section ends -->
 
+<!-- About section starts -->
   <section class="section__container about__container" id="about">
     <div class="about__header">
       <h2 class="section__header">ABOUT US</h2>
@@ -91,6 +94,7 @@
       </div>
     </div>
   </section>
+<!-- About section ends-->
 
   <section class="session">
     <div class="session__card">
@@ -128,6 +132,25 @@
       <p>
         Experience the ultimate full-body workout with our intense CrossFit
         classes at FitPhysique.
+      </p>
+      <button class="btn btn__secondary">
+        READ MORE <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+    <div class="session__card">
+      <h4>YOGA</h4>
+      <p>
+        Experience the flexibility that yoga brings with our exclusive
+        classes at FitPhysique.
+      </p>
+      <button class="btn btn__secondary">
+        READ MORE <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+    <div class="session__card">
+      <h4>BOXING</h4>
+      <p>
+        Engage in some hardcore boxing routines with our special trainers at FitPhysique.
       </p>
       <button class="btn btn__secondary">
         READ MORE <i class="ri-arrow-right-line"></i>
@@ -282,6 +305,7 @@
     </div>
   </section>
 
+  <!-- Testimonial section starts -->
   <section class="section__container client__container" id="client">
     <section class="section__container client__container" id="client">
       <h2 class="section__header">OUR TESTIMONIALS</h2>
@@ -325,11 +349,22 @@
               <h4>Emily Davis</h4>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/client-4.png" alt="client" />
+              <div><i class="ri-double-quotes-r"></i></div>
+              <p>
+                FitPhysique is my home away from home. 10/10 would recommend.
+              </p>
+              <h4>Anonymous User</h4>
+            </div>
+          </div>
     </section>
-
-    <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
+<!-- Testimonial section end -->
+ 
+    <!-- <footer class="footer" id="contact">
+      <div class="section__container footer__container"> -->
+        <!-- <div class="footer__col">
           <div class="footer__logo">
             <a href="#"><img src="assets/logo.png" alt="logo" /></a>
           </div>
@@ -357,8 +392,8 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="footer__col">
+        </div> -->
+        <!-- <div class="footer__col">
           <h4>GALLERY</h4>
           <div class="gallery__grid">
             <img src="assets/gallery-1.jpg" alt="gallery" />
@@ -371,8 +406,8 @@
             <img src="assets/gallery-8.jpg" alt="gallery" />
             <img src="assets/gallery-9.jpg" alt="gallery" />
           </div>
-        </div>
-        <div class="footer__col">
+        </div> -->
+        <!-- <div class="footer__col">
           <h4>NEWSLETTER</h4>
           <p>
             Don't miss out on the latest news and offers - sign up today and
@@ -397,7 +432,7 @@
         <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
       </div>
       </div>
-  </section>
+  </section> -->
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -416,7 +451,7 @@
       },
     });
   </script>
-
+<!-- Blog section begins -->
   <section class="blog" id="blog">
     <div class="section__container blog__container">
       <h2 class="section__header">BLOGS</h2>
@@ -437,13 +472,19 @@
           <img src="assets/blog-4.jpg" alt="blog" />
           <h4>A Beginner's Guide to Starting Your Running Journey</h4>
         </div>
+        <div class="blog__card">
+          <img src="assets/session-5.jpg" alt="blog" />
+          <h4>Why warmup and cooldown is important</h4>
+        </div>
       </div>
       <div class="blog__btn">
         <button class="btn btn__primary">VIEW ALL</button>
       </div>
     </div>
   </section>
+<!-- Blog section ends -->
 
+<!-- BMI Calculator -->
   <section class="section__container bmi__container">
 
     <div class="wrapper">
@@ -456,7 +497,7 @@
         <input type="text" id="weight"><br><span id="weight_error"></span>
       </p>
 
-      <button class="btn" id="btn">Calculate</button>
+      <button class="btn" id="btn" onclick="">Calculate</button>
       <p id="output"></p>
     </div>
   </section>
@@ -476,7 +517,7 @@
         <option value="muscle-gain">Muscle Gain</option>
         <option value="fat-loss">Fat Loss</option>
       </select>
-
+      <br>
       <button class="btn" id="protein-btn">Calculate Protein Intake</button>
       <p id="protein-output"></p>
     </div>
@@ -504,7 +545,7 @@
 
       <label for="macro-calories">Daily Calories:</label>
       <input type="number" id="macro-calories" placeholder="Your daily calorie intake">
-
+      <br>
       <button class="btn" id="macro-btn">Calculate Macros</button>
       <p id="macro-output"></p>
     </div>
@@ -515,6 +556,7 @@
   <br>
   <br>
   <br>
+  <!-- Footer section -->
   <footer class="footer" id="contact">
     <div class="section__container footer__container">
       <div class="footer__col">
@@ -566,12 +608,12 @@
           Don't miss out on the latest news and offers - sign up today and
           join our thriving fitness community!
         </p>
-        <form onsubmit="sendEmail(); reset(); return false;">
-          <span id="join">Join</span>
+        <form onsubmit="sendEmail(); reset(); return false;" id="form-bg">
+          <!-- <span id="join">Join</span> -->
           <input type="text" id="name" placeholder="Enter Name" />
           <input type="text" id="email" placeholder="Enter Email" />
           <input type="text" id="phone" placeholder="Enter Phone no." />
-          <textarea id="message" name="message" rows="8" cols="33">Write your message...</textarea>
+          <textarea id="message" name="message" rows="8" cols="40">Write your message...</textarea>
           <button type="submit" class="btn btn__primary">SEND</button>
         </form>
         <div class="footer__socials">
@@ -581,12 +623,17 @@
         </div>
       </div>
     </div>
+    <div class="swiper-pagination">
+      <span class="swiper-pagination-bullet"></span>
+      <span class="swiper-pagination-bullet"></span>
+      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+    </div>
     <div class="footer__bar">
       Copyright © 2024 Web Design Mastery. All rights reserved.
     </div>
   </footer>
 
-
+<!-- Footer section end -->
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
