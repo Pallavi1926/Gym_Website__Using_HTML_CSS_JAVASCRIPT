@@ -241,64 +241,139 @@ nav {
   color: var(--extra-light);
 }
 
+:root {
+  --primary-color: #0077ff;
+  --secondary-color: #ff4081;
+  --background-light: #f7f7f7;
+  --text-dark: #333;
+  --text-light: #777;
+  --card-bg: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --hover-color: #ff0066;
+}
+
 .about__header {
   text-align: center;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .about__header .section__header {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
 }
 
 .about__header .section__description {
-  max-width: 350px;
+  max-width: 650px;
   margin-inline: auto;
+  font-size: 1.25rem;
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 .about__grid {
-  margin-top: 4rem;
+  margin-top: 5rem;
   display: grid;
-  gap: 4rem;
+  gap: 3rem;
+  /* Defines a fixed row height and flexible column layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto; /* Ensure rows adapt to content but maintain the card layout */
+  padding: 0 2rem;
+}
+
+.about__card {
+  background-color: var(--card-bg);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--box-shadow);
+  border-top: 5px solid var(--secondary-color);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 450px; /* Set a specific height for all cards */
+  display: flex; /* Ensures content is vertically centered */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space the content to fit evenly */
+}
+
+.about__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 119, 255, 0.2), rgba(255, 64, 129, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.about__card:hover::before {
+  opacity: 1;
+}
+
+.about__card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .about__card h4 {
   position: relative;
-  isolation: isolate;
-  margin-bottom: 1rem;
-  padding-top: 4rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: var(--header-font);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
   color: var(--text-dark);
+  text-transform: uppercase;
 }
 
 .about__card h4::before {
+  content: attr(data-number);
   position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 6rem;
-  line-height: 6rem;
-  color: var(--text-dark);
+  bottom: -40px;
+  right: 10px;
+  font-size: 7rem;
+  color: var(--hover-color);
   opacity: 0.1;
-  z-index: -1;
-}
-
-.about__card:nth-child(1) h4::before {
-  content: "01";
-}
-
-.about__card:nth-child(2) h4::before {
-  content: "02";
-}
-
-.about__card:nth-child(3) h4::before {
-  content: "03";
 }
 
 .about__card p {
   color: var(--text-light);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  flex-grow: 1; /* Ensures that the paragraph grows to fill available space */
 }
+
+.about__card a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Ensures the button stays centered */
+}
+
+.about__card a:hover {
+  background-color: var(--hover-color);
+}
+
+
+
 
 .session {
   display: grid;
@@ -363,45 +438,76 @@ nav {
   color: var(--extra-light);
 }
 
+/* Grid layout for trainers */
 .trainer__grid {
   margin-top: 4rem;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Increased gap for better spacing */
+}
+
+/* Trainer card styles with default black gradient background */
+.trainer__card {
+  background: linear-gradient(135deg, #000000, #434343); /* Default black gradient */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease; /* Transition for hover */
+}
+
+/* Hover effect with new gradient blending black */
+.trainer__card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, #000000, #ff5e62); /* Gradient blending black with warm colors on hover */
 }
 
 .trainer__card img {
   margin-bottom: 1rem;
+  border-radius: 50%; /* Circular images */
+  width: 100px; /* Restrict size for uniformity */
+  height: 100px;
+  object-fit: cover; /* Crop image for better presentation */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .trainer__card h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.6rem; /* Slightly bigger text for prominence */
+  font-weight: 600;
   font-family: var(--header-font);
-  color: var(--text-dark);
+  color: #fff; /* White text for better contrast against gradient background */
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .trainer__card p {
-  margin-bottom: 1rem;
-  color: var(--text-light);
+  margin-bottom: 1.5rem; /* Slightly more space for breathing room */
+  color: #e0e0e0; /* Lighter color for the text */
   text-align: center;
+  line-height: 1.6; /* Improved readability */
 }
 
+/* Social icons styling */
 .trainer__socials {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Wider gap between icons */
 }
 
 .trainer__socials a {
-  font-size: 1.25rem;
-  color: var(--text-light);
+  font-size: 1.5rem; /* Larger icons */
+  color: #e0e0e0; /* Lighter color for social icons */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .trainer__socials a:hover {
-  color: var(--primary-color);
+  color: #fff; /* Change color to white on hover */
+  transform: scale(1.2); /* Enlarge icon on hover */
 }
+
 
 .membership {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
