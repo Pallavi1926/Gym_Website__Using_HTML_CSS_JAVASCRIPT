@@ -446,20 +446,20 @@ nav {
   gap: 2rem; /* Increased gap for better spacing */
 }
 
-/* Trainer card styles with default gradient background */
+/* Trainer card styles with default black gradient background */
 .trainer__card {
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Default gradient */
+  background: linear-gradient(135deg, #000000, #434343); /* Default black gradient */
   border-radius: 10px; /* Rounded corners for the card */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease; /* Transition for hover */
 }
 
-/* Hover effect with new gradient */
+/* Hover effect with new gradient blending black */
 .trainer__card:hover {
   transform: translateY(-10px); /* Slight lift on hover */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  background: linear-gradient(135deg, #ff9966, #ff5e62); /* New gradient background on hover */
+  background: linear-gradient(135deg, #000000, #ff5e62); /* Gradient blending black with warm colors on hover */
 }
 
 .trainer__card img {
