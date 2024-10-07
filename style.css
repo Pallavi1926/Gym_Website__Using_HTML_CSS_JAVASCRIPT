@@ -689,6 +689,7 @@ input[type="text"]:hover, input[type="text"]:focus {
   transform: scale(1);
 }
 
+
 .protein__header {
   font-size: 1.2rem;
   font-weight: 600;
@@ -778,6 +779,7 @@ input[type="text"]:hover, input[type="text"]:focus {
 
 .macro__container .btn {
   color: #5b5757;
+
 
 }
 
