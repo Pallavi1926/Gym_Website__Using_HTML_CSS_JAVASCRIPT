@@ -13,19 +13,20 @@
 
 * {
   padding: 0;
-  box-sizing: border-box; 
-  margin: auto;
-  overflow-x: hidden; 
+
+  margin: 0;
+  box-sizing: border-box;
+
 }
 
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .section__header {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -41,8 +42,8 @@
   outline: none;
   border: none;
   color: var(--white);
-  border-radius: 2px;
-  transition: 0.3s;
+  border-radius: 10px;
+  transition: 0.7s;
   cursor: pointer;
 }
 
@@ -66,7 +67,7 @@
 
 img {
   display: flex;
-  width: 100%;
+  width: 80%;
 }
 
 a {
@@ -100,10 +101,22 @@ nav {
 }
 
 .nav__logo img {
-  max-width: 110px;
+
+  max-width: 100px;
 }
 
-.nav__links { 
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 80%;
+  padding: 2rem;
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -114,11 +127,10 @@ nav {
   position: relative; /* Ensure the hover line is positioned relative to each link */
 }
 
-.nav__links li a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 1.1rem;
+
+.nav__links a {
+  font-size: 1rem;
+
   font-family: var(--header-font);
   white-space: nowrap;
   color: var(--white);
@@ -234,6 +246,7 @@ nav {
   font-family: var(--header-font);
   line-height: 3rem;
   color: var(--white);
+
 }
 
 .header__content p {
@@ -260,6 +273,13 @@ nav {
   margin-top: 4rem;
   display: grid;
   gap: 4rem;
+}
+
+.about__card{
+  border: 1px transparent black;
+  padding: 9%;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .about__card h4 {
@@ -368,9 +388,14 @@ nav {
   display: grid;
   gap: 1rem;
 }
-
+.trainer__card{
+  padding: 5%;
+  border-radius: 5%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 10px -25px, rgba(10, 37, 64, 0.35) 3px -3px 10px 0px inset;
+}
 .trainer__card img {
-  margin-bottom: 1rem;
+  margin: 9% auto;
+  border-radius: 6%;
 }
 
 .trainer__card h4 {
@@ -575,70 +600,59 @@ nav {
   margin-inline: auto;
 }
 
-.bmi__header{
+.bmi__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.bmi__container span{
+.bmi__container span {
   color: red;
 }
-.bmi__container{
+.bmi__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.bmi__container .wrapper{
+.bmi__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1 rem;
   width: 100%;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.bmi__container input{
+.bmi__container input {
   outline: none;
 }
-.bmi__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
+
+.bmi__container .btn {
+  color: #5b5757;
+
 }
 
- form {
+form {
   display: flex;
 }
-#form-bg{
+#form-bg {
   background-color: transparent;
 }
 
-#join {
-  background-color: #dc030a;
-  width: 5rem;
-  text-align: center;
-  margin-top: 0.5rem;
-  border-radius: 8%;
-  color: white;
-  font-weight: 700;
-}
 
 input[type="text"] {
   margin: 10px 0;
@@ -652,24 +666,11 @@ input[type="text"] {
 
 
 input[type="text"]:hover, input[type="text"]:focus {
-  border-color: #c1406b;
-  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   outline: none;
 }
 
-textarea{
-  width: 20rem;
-  height: 6.25rem;
-  color: #8c8787;
-  border: 1px black solid;
-  margin-top: 0.5rem;
-  border-radius: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-textarea:hover{
-  box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
-}
 
 .btn__primary {
   padding: 20px;
@@ -683,111 +684,104 @@ textarea:hover{
   margin-top: 0.3rem;
 }
 
-
-
 .btn__primary:active {
   background-color: #004494;
   transform: scale(1);
 }
 
 
-.protein__header{
+.protein__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.protein__container span{
+.protein__container span {
   color: red;
 }
-.protein__container{
+.protein__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.protein__container .wrapper{
+.protein__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1 rem;
   width: 100%;
-  
+
   background: white;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.protein__container input{
+.protein__container input {
   outline: none;
 }
-.protein__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
+
+.protein__container .btn {
+  color: #5b5757;
+
 }
 
-
-.macro__header{
+.macro__header {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-dark);
 }
 
-.macro__container span{
+.macro__container span {
   color: red;
 }
-.macro__container{
+.macro__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height:400px;
+  height: 400px;
   background: white;
-  
-  
- 
 }
 
-.macro__container .wrapper{
+.macro__container .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1 rem;
   width: 100%;
-  
-  background: white;
+
+  background: black;
   border-radius: 5px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+      to right,
+      rgba(187, 180, 180, 0.8),
+      rgba(187, 180, 180, 0.8)
+    ),
+    url("assets/banner-2.png");
 }
-.macro__container input{
+.macro__container input {
   outline: none;
 }
-.macro__container .btn{
-  color:whitesmoke;
-  background-color: #5b5757;
-}
 
+.macro__container .btn {
+  color: #5b5757;
+
+
+}
 
 .footer {
   background-color: var(--text-dark);
@@ -853,7 +847,6 @@ url("assets/banner-2.png");
   justify-content: center;
   background-color: var(--white);
   border-radius: 2px;
-  
 }
 
 .footer__col input {
@@ -861,7 +854,7 @@ url("assets/banner-2.png");
   padding-inline: 1rem;
   padding-top: 0.8rem;
   outline: none;
-  border: 2px solid transparent;
+  border: none;
   color: var(--text-dark)
 }
 .footer__col input:hover,
@@ -869,13 +862,11 @@ url("assets/banner-2.png");
   border: 2px solid var(--primary-color);
 }
 
-.footer__col form button{
-  
+.footer__col form button {
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .footer__socials {
@@ -933,7 +924,43 @@ url("assets/banner-2.png");
   }
 }
 
-@media (width > 768px){
+@media (width > 768px) {
+  nav {
+    position: static;
+    padding: 1.5rem 1rem;
+  }
+
+  .nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo img {
+    max-width: 120px;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    transform: none;
+    z-index: 1;
+  }
+
+
   .header__container {
     padding-block: 12rem;
     grid-template-columns: repeat(2, 1fr);
@@ -989,9 +1016,6 @@ url("assets/banner-2.png");
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  
-  
 }
 
 @media (width > 1024px) {
