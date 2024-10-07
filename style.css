@@ -14,8 +14,8 @@
 * {
   padding: 0;
   box-sizing: border-box; 
-  margin: auto;
-  overflow-x: hidden; 
+ margin: 0;
+ 
 }
 
 .section__container {
@@ -29,11 +29,13 @@
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
-  text-align: center;
+  /* text-align: center; */
+  /* margin: 2rem 0; */
 }
 
 .section__description {
   color: var(--text-light);
+ 
 }
 
 .btn {
@@ -64,7 +66,7 @@
   border-color: var(--primary-color);
 }
 
-img {
+ img {
   display: flex;
   width: 100%;
 }
@@ -85,16 +87,16 @@ body {
 
 nav {
   background-color: var(--text-dark);
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
-  z-index: 100;
+  z-index: 5;
 }
 
 .nav__bar {
   width: 100%;
   max-width: var(--max-width);
-  margin-inline: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   color: white;
 }
@@ -117,7 +119,7 @@ nav {
 .nav__links li a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.5s ease;
   font-size: 1.1rem;
   font-family: var(--header-font);
   white-space: nowrap;
@@ -142,6 +144,7 @@ nav {
 
 .nav__links li a:hover {
   color: white; /* Text remains white on hover */
+ 
 }
 
 .nav__links li.active a {
@@ -169,6 +172,7 @@ nav {
 .nav__header {
   padding: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: var(--text-dark);
@@ -186,9 +190,9 @@ nav {
     ),
     url("assets/lean-man-doing-lateral-raises.webp");
   background-size: cover;
-  background-position: center center;
+  background-position:center center;
   background-repeat: no-repeat;
-  margin-top: 60px;
+
 }
 
 /* card hover effect */
@@ -242,23 +246,30 @@ nav {
 }
 
 .about__header {
-  text-align: center;
-  display: grid;
-  gap: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+flex-wrap: wrap;
 }
 
 .about__header .section__header {
+  
   font-size: 3rem;
 }
 
 .about__header .section__description {
+  display: flex;
+  justify-content: center;
   max-width: 350px;
   margin-inline: auto;
 }
 
 .about__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 
@@ -301,7 +312,8 @@ nav {
 }
 
 .session {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -311,6 +323,8 @@ nav {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 60vh;
+  width: 50%;
 }
 
 .session__card:nth-child(1) {
@@ -364,20 +378,35 @@ nav {
 }
 
 .trainer__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  
+  flex-wrap: wrap;
+  gap: 5rem;
+ 
 }
 
 .trainer__card img {
+  
   margin-bottom: 1rem;
+}
+.trainer__card{
+  background-color: rgb(11, 7, 7);
+  height:410px;
+  width: 20%;
+  transition: all 0.3s;
+}
+.trainer__card:hover{
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(9, 8, 8);
 }
 
 .trainer__card h4 {
   font-size: 1.5rem;
   font-weight: 500;
   font-family: var(--header-font);
-  color: var(--text-dark);
+  color: gray;
   text-align: center;
 }
 
@@ -400,7 +429,7 @@ nav {
 }
 
 .trainer__socials a:hover {
-  color: var(--primary-color);
+  color: var(--text-dark);
 }
 
 .membership {
@@ -417,7 +446,8 @@ nav {
 
 .membership__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -537,7 +567,9 @@ nav {
 
 .blog__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
   gap: 1rem;
 }
 
@@ -602,7 +634,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1 rem;
+  gap: 1rem;
   width: 100%;
   
   background: white;
@@ -718,7 +750,7 @@ textarea:hover{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1 rem;
+  gap: 1rem;
   width: 100%;
   
   background: white;
@@ -767,7 +799,7 @@ url("assets/banner-2.png");
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 1 rem;
+  gap: 1rem;
   width: 100%;
   
   background: white;
@@ -790,10 +822,17 @@ url("assets/banner-2.png");
 
 
 .footer {
+  position: absolute;
+  margin-top: 10vh;
+  left: 0vw;
   background-color: var(--text-dark);
   width: 100%;
+  
+}
 .footer__container {
-  display: grid;
+  scale: 0.9;
+  display: flex;
+  /* flex-wrap: wrap; */
   gap: 4rem 2rem;
   width: 100%;
 }
@@ -898,6 +937,7 @@ url("assets/banner-2.png");
 .footer__socials a:hover {
   color: var(--white);
   background-color: var(--primary-color);
+  box-shadow:0 0 10px var(--primary-color);
 }
 
 .footer__bar {
@@ -1006,9 +1046,8 @@ url("assets/banner-2.png");
 
 @media (max-width: 600px) {
   .footer {
-    padding: 5px;
+    padding: 5px;   
   }
-}
 }
 
 @media (max-width: 768px) {
