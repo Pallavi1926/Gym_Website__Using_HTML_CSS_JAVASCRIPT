@@ -444,22 +444,18 @@
     </div>
   </section>
 
-  <section class="section__container bmi__container">
+  
+  <div class="bmi-calculator">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height">
 
-    <div class="wrapper">
-      <h2 class="bmi__header">BMI CALCULATOR</h2>
-      <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
-      </p>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
 
-      <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
-      </p>
+    <button id="calculate">Calculate</button>
+</div>
 
-      <button class="btn" id="btn">Calculate</button>
-      <p id="output"></p>
-    </div>
-  </section>
 
   <!-- Protein Intake Calculator -->
   <section class="section__container protein__container">

@@ -1069,3 +1069,48 @@ url("assets/banner-2.png");
     margin-right: 200px;
   }
 }
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif; /* Change to your website's font */
+  background-color: #f9f9f9; /* Background color */
+  color: #333; /* Text color */
+}
+
+/* Container Styles */
+.bmi-calculator {
+  max-width: 400px; /* Maximum width of the calculator */
+  margin: 20px auto; /* Center the calculator */
+  padding: 20px; /* Padding inside the container */
+  background-color: #ffffff; /* Background color for the calculator */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Input Field Styles */
+input[type="number"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the input */
+  margin: 10px 0; /* Margin around the input */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+/* Calculate Button Styles */
+button {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the button */
+  margin-top: 10px; /* Margin above the button */
+  background-color: black; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: grey; /* Darker blue on hover */
+}
