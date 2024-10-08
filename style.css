@@ -21,7 +21,7 @@
 .section__container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .section__header {
@@ -30,6 +30,7 @@
   font-family: var(--header-font);
   color: var(--text-dark);
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .section__description {
@@ -479,12 +480,29 @@ nav {
 .membership__card:hover .btn {
   background-color: var(--text-dark);
 }
-
-.swiper {
-  margin-top: 2rem;
-  padding-bottom: 3rem;
+/* ------------------------ */
+swiper-container {
   width: 100%;
+  height: 100%;
 }
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* -------------------------- */
 
 .client__card {
   max-width: 600px;
@@ -1069,3 +1087,17 @@ url("assets/banner-2.png");
     margin-right: 200px;
   }
 }
+
+/* for scrollbar */
+.container {
+  max-height: 100vh; 
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
