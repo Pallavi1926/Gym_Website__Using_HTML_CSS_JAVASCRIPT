@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="container">
 
   <nav>
     <div class="nav__bar">
@@ -41,8 +41,8 @@
   <header class="header" id="header">
     <div class="section__container header__container">
       <div class="header__content">
-        <h1>HARD WORK</h1>
-        <h2>IS THE KEY TO EVERY SUCCESS</h2>
+        <h1 class="container">HARD WORK</h1>
+        <h2 class="container">IS THE KEY TO EVERY SUCCESS</h2>
         <p>Start by taking inspiration, and continue by becoming an inspiration.</p>
         <p>At <strong>FitPhysique</strong>, we believe in the power of persistence and dedication. Embrace the journey,
           push your limits, and watch yourself transform.</p>
@@ -69,21 +69,21 @@
     </div>
     <div class="about__grid">
       <div class="about__card">
-        <h4>WINNER COACHES</h4>
+        <h4 class="container">WINNER COACHES</h4>
         <p>
           We pride ourselves on having a team of dedicated and experienced
           coaches who are committed to helping you succeed.
         </p>
       </div>
       <div class="about__card">
-        <h4>AFFORDABLE PRICE</h4>
+        <h4 class="container">AFFORDABLE PRICE</h4>
         <p>
           We believe that everyone should have access to high-quality fitness
           facilities without breaking the bank.
         </p>
       </div>
       <div class="about__card">
-        <h4>MODERN EQUIPMENTS</h4>
+        <h4 class="container">MODERN EQUIPMENTS</h4>
         <p>
           Stay ahead of the curve with our state-of-the-art equipment designed
           to elevate your workout experience.
@@ -282,51 +282,71 @@
     </div>
   </section>
 
-  <section class="section__container client__container" id="client">
-    <section class="section__container client__container" id="client">
-      <h2 class="section__header">OUR TESTIMONIALS</h2>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img src="assets/client-1.jpg" alt="client" />
-              <div><i class="ri-double-quotes-r"></i></div>
-              <p>
-                I've been a member at FitPhysique for over a year now, and I
-                couldn't be happier with my experience. The range of classes
-                offered here is impressive - from high-energy cardio sessions to
-                relaxing yoga classes, there's something for everyone.
-              </p>
-              <h4>Sarah Johnson</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img src="assets/client-2.jpg" alt="client" />
-              <div><i class="ri-double-quotes-r"></i></div>
-              <p>
-                The classes are always well-planned and engaging, and the
-                instructors do an excellent job of keeping us motivated
-                throughout. I'm so grateful to have found such a supportive and
-                inclusive gym.
-              </p>
-              <h4>Michael Wong</h4>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img src="assets/client-3.jpg" alt="client" />
-              <div><i class="ri-double-quotes-r"></i></div>
-              <p>
-                I've tried many gyms in the past, but none of them compare to
-                FitPhysique. From the moment I walked through the doors, I felt
-                welcomed and supported by the staff and fellow members alike.
-              </p>
-              <h4>Emily Davis</h4>
-            </div>
-          </div>
-    </section>
-
+  <section class="section__container client__container" id = "client">
+    <h2 class="section__header">OUR TESTIMONIALS</h2>
+    <swiper-container class="mySwiper" navigation="false" pagination ="true" keyboard="true" mousewheel="true"
+    css-mode="true">
+    <swiper-slide>
+      <div class="client__card">
+        <img src="assets/client-1.jpg" alt="client" />
+        <div><i class="ri-double-quotes-r"></i></div>
+        <p>
+          I've been a member at FitPhysique for over a year now, and I
+          couldn't be happier with my experience. The range of classes
+          offered here is impressive - from high-energy cardio sessions to
+          relaxing yoga classes, there's something for everyone.
+        </p>
+        <h4>Sarah Johnson</h4>
+      </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="client__card">
+        <img src="assets/client-2.jpg" alt="client" />
+        <div><i class="ri-double-quotes-r"></i></div>
+        <p>
+          The classes are always well-planned and engaging, and the
+          instructors do an excellent job of keeping us motivated
+          throughout. I'm so grateful to have found such a supportive and
+          inclusive gym.
+        </p>
+        <h4>Michael Wong</h4>
+      </div>
+    </swiper-slide>
+    <swiper-slide><div class="client__card">
+      <img src="assets/client-3.jpg" alt="client" />
+      <div><i class="ri-double-quotes-r"></i></div>
+      <p>
+        I've tried many gyms in the past, but none of them compare to
+        FitPhysique. From the moment I walked through the doors, I felt
+        welcomed and supported by the staff and fellow members alike.
+      </p>
+      <h4>Emily Davis</h4>
+    </div>
+  </swiper-slide>
+  </swiper-container>
+  </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    //Initialize Swiper
+    const swiper = new Swiper('.mySwiper', {
+      cssMode: true,         // Keeps the CSS mode active
+      navigation: true,      // Enables navigation arrows
+      pagination: {
+        el: '.pagination',
+        clickable: true,
+      },      // Enables pagination (dots)
+      keyboard: true,        // Enables keyboard control
+      mousewheel: false,      // Enables scrolling via mousewheel
+      autoplay: {
+        delay: 1000,         // Delay between slides in milliseconds (3000ms = 3s)
+        disableOnInteraction: false, // Autoplay won't stop when users interact with the carousel
+      },
+      loop: true,            // Enables looping of slides
+    });
+   </script>
+  
+<section>
     <footer class="footer" id="contact">
       <div class="section__container footer__container">
         <div class="footer__col">
@@ -391,31 +411,14 @@
           </div>
         </div>
       </div>
-      <div class="swiper-pagination">
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet"></span>
-        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-      </div>
+      
       </div>
   </section>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 
-  <script>
-    const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
+  
 
   <section class="blog" id="blog">
     <div class="section__container blog__container">
