@@ -206,7 +206,7 @@ nav {
 .nav_style {
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
@@ -308,6 +308,7 @@ nav {
 .session__card {
   padding: 5rem 2rem;
   text-align: center;
+  text-shadow: #5b5757;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
