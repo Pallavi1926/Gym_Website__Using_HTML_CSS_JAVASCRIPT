@@ -35,6 +35,11 @@
     document.getElementById('register-link').addEventListener('click', function(event) {
       event.preventDefault(); // Prevent the default anchor behavior
       window.location.href = 'signup.html'; // Redirect to the signup page
+
+       // Disable button and change text to 'Logging in...' on form submission
+    document.querySelector('.btn').addEventListener('click', function() {
+      this.disabled = true;  // Disable the button
+      this.textContent = 'Logging in...';  // Change button text
     });
   </script>
   
