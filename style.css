@@ -46,6 +46,35 @@
   cursor: pointer;
 }
 
+/* scroll button */
+.scroll-btn {
+  display: flex;
+  position: fixed;
+  height: 70px; 
+   width: 70px;
+ font-size: 30px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  background-color: red;
+  z-index: 99;
+  
+  bottom: 50px;
+  right: 50px;
+ 
+}
+
+.scroll-btn :hover {
+  background-color: white;
+  color: red;
+  border: red;
+}
+
 .btn__primary {
   background-color: var(--primary-color);
 }
@@ -104,6 +133,7 @@ nav {
 }
 
 .nav__links { 
+ 
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -127,26 +157,37 @@ nav {
 /* Hover effect: Red line under link */
 .nav__links li a::after {
   content: "";
+  
   position: absolute;
   left: 0;
   bottom: 0;
   width: 0;
   height: 2px;
   background-color: red;
-  transition: width 0.05s ease;
+  transition: width 0.1s linear;
 }
 
-.nav__links li a:hover::after {
+/* .nav__links li a:hover::after {
+
   width: 100%; /* Line expands on hover */
-}
+/* }  */
 
 .nav__links li a:hover {
-  color: white; /* Text remains white on hover */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  background-color: red;
+  border-radius: 3px;
+  border: none;
+  color: white; 
+  transform: scale(1);
+  transition: 0.1 linear;
+  /* Text remains white on hover */
 }
 
-.nav__links li.active a {
+/* .nav__links li.active a {
   color: red; /* Red color for the active link */
-}
+/* } */ 
 
 .nav__links li.active a::after {
   display: none; 
@@ -211,7 +252,7 @@ nav {
 }
 
 .nav_style:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .header__container {
@@ -1020,6 +1061,8 @@ url("assets/banner-2.png");
   }
 
   .nav__menu__btn {
+    height: 50px;
+    width: 50px;
     display: block;
     position: absolute;
     top: 25px;
@@ -1068,4 +1111,8 @@ url("assets/banner-2.png");
     display: block;
     margin-right: 200px;
   }
+
 }
+
+
+
