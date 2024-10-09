@@ -6,34 +6,133 @@
   <title>Register</title>
   <link rel="stylesheet" href="styles.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif; /* Use a more standard font */
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .wrapper {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 90%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px 40px; /* Add padding for the icon */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-box i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+    }
+
+    .input-box input:focus {
+      border-color: #28a745; /* Change border color on focus */
+      outline: none; /* Remove default outline */
+    }
+
+    #error-message {
+      color: red; /* Change error message color */
+      font-size: 14px;
+      text-align: center; /* Center the error message */
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838; /* Darker green on hover */
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .register-link a {
+      color: #007bff; /* Link color */
+      text-decoration: none; /* Remove underline */
+    }
+
+    .register-link a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+
+    @media (max-width: 600px) {
+      .wrapper {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="wrapper">
-    <form id="register-form">
+    <form id="register-form" novalidate>
       <h2>Create Account</h2>
-      <img src="/assets/logo.png" alt="">
+      <img src="/assets/logo.png" alt="Logo" style="display: block; margin: 0 auto 20px; width: 100px; height: auto;"> <!-- Responsive logo -->
 
       <div class="input-box">
-        <input type="text" placeholder="Username" required>
+        <input type="text" placeholder="Username" required aria-required="true">
         <i class='bx bxs-user'></i>
       </div>
 
       <div class="input-box">
-        <input type="email" placeholder="Email" required>
+        <input type="email" placeholder="Email" required aria-required="true">
         <i class='bx bxs-envelope'></i>
       </div>
 
       <div class="input-box">
-        <input type="password" id="password" placeholder="Password" required>
-        <i class='bx bxs-show' id="togglePassword" style="position: absolute; right: 20px; top: 30%; cursor: pointer;"></i>
+        <input type="password" id="password" placeholder="Password" required aria-required="true">
+        <i class='bx bxs-show' id="togglePassword" style="cursor: pointer;"></i>
       </div>
 
       <div class="input-box">
-        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-        <i class='bx bxs-show' id="toggleConfirmPassword" style="position: absolute; right: 20px; top: 30%; cursor: pointer;"></i>
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required aria-required="true">
+        <i class='bx bxs-show' id="toggleConfirmPassword" style="cursor: pointer;"></i>
       </div>
-      
-      <div id="error-message" style="color: rgb(0, 0, 0);  font-size: 14px ;"; ></div>
+
+      <div id="error-message"></div>
 
       <button type="submit" class="btn">Register</button>
       <div class="register-link">
