@@ -197,6 +197,8 @@ nav {
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding-bottom: 20px;
 }
 
 .trainer__card:hover {
@@ -365,8 +367,10 @@ nav {
 
 .trainer__grid {
   margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 50px;
 }
 
 .trainer__card img {
