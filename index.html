@@ -5,27 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <title>FitPhysique</title>
+  <link rel="icon" type="icon/png" href="assets/logo.png">
+ 
 
 </head>
 
 <body>
 
   <nav>
-    <div class="nav__bar">
-      <div class="nav__header">
-        <div class="nav__logo">
+    <div class="nav__bar ">
+      <div class="nav__header ">
+        <div class="nav__logo ">
           <a href="#header"><img src="assets/logo.png" alt="logo" /></a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
-      <ul class="nav__links" id="nav-links">
+      <div class="nav__links" id="nav-links">
         <li><a href="#header" class="active">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#trainer">TRAINER</a></li>
@@ -33,11 +38,11 @@
         <li><a href="#blog">BLOG</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <i class="ri-close-line"></i>
-      </ul>
+      </div>
     </div>
+    
   </nav>
-
-
+ 
   <header class="header" id="header">
     <div class="section__container header__container">
       <div class="header__content">
@@ -57,7 +62,8 @@
       </div>
     </div>
   </header>
-
+  
+   
   <section class="section__container about__container" id="about">
     <div class="about__header">
       <h2 class="section__header">ABOUT US</h2>
@@ -398,6 +404,11 @@
       </div>
       </div>
   </section>
+ 
+  
+     <button  class="scroll-btn"  onclick="scrollToTop()"> <i class="fa-solid fa-arrow-up"></i></button>
+       
+      
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -564,7 +575,7 @@
         <h4>NEWSLETTER</h4>
         <p>
           Don't miss out on the latest news and offers - sign up today and
-          join our thriving fitness community!
+          join our thriving fitness community!  HEY
         </p>
         <form onsubmit="sendEmail(); reset(); return false;">
           <span id="join">Join</span>
@@ -598,6 +609,8 @@
     document.getElementById('get-started-btn').addEventListener('click', function () {
       window.location.href = 'login.html'; // Redirect to the login page
     });
+
+
   </script>
 
 

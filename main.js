@@ -2,6 +2,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const closeIcon = navLinks.querySelector("i.ri-close-line");
+const scrollbtn = document.querySelector(".scroll-btn");
 
 // Toggle the mobile menu visibility
 menuBtn.addEventListener("click", () => {
@@ -156,3 +157,25 @@ function sendEmail() {
     Body: "And this is the body",
   }).then((message) => alert(message));
 }
+
+//  when scroll top to bottom then visible scroll button bottom to top scroll
+
+
+
+window.onscroll = function() {scrollfunction()};
+
+const  scrollfunction = () => {
+  if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+    scrollbtn.style.display = "block";
+  } else {
+    scrollbtn.style.display = "none";
+  }
+}
+
+function scrollToTop () {
+  window.scrollTo({
+    top:0,
+    behavior:'smooth'
+  });
+}
+
