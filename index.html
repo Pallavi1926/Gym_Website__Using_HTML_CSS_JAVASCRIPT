@@ -444,77 +444,75 @@
     </div>
   </section>
 
+  <!---BMI calculator-->
   <section class="section__container bmi__container">
-
     <div class="wrapper">
       <h2 class="bmi__header">BMI CALCULATOR</h2>
+      
       <p>Height in CM:
-        <input type="text" id="height"><br><span id="height_error"></span>
+        <input type="text" id="height"><br><span id="height_error" class="error"></span>
       </p>
-
+  
       <p>Weight in KG:
-        <input type="text" id="weight"><br><span id="weight_error"></span>
+        <input type="text" id="weight"><br><span id="weight_error" class="error"></span>
       </p>
-
-      <button class="btn" id="btn">Calculate</button>
+  
+      <!-- Ensure the button's ID matches the one in your JavaScript -->
+      <button class="btn" id="bmi-btn">Calculate</button>
+      
       <p id="output"></p>
     </div>
   </section>
+  
 
   <!-- Protein Intake Calculator -->
-  <section class="section__container protein__container">
-    <div class="wrapper">
-      <h2 class="protein__header">Protein Intake Calculator</h2>
-      <p>Enter your details to estimate your daily protein needs:</p>
+<section class="section__container protein__container">
+  <div class="wrapper">
+    <h2 class="protein__header">Protein Intake Calculator</h2>
+    <p>Enter your details to estimate your daily protein needs:</p>
 
-      <label for="protein-weight">Weight (kg):</label>
-      <input type="number" id="protein-weight" placeholder="Your weight in kg">
+    <label for="protein-weight">Weight (kg):</label>
+    <input type="number" id="protein-weight" placeholder="Your weight in kg">
+    <br><span id="protein-weight-error" class="error"></span> <!-- Error span -->
 
-      <label for="protein-goal">Fitness Goal:</label>
-      <select id="protein-goal">
-        <option value="maintenance">Maintenance</option>
-        <option value="muscle-gain">Muscle Gain</option>
-        <option value="fat-loss">Fat Loss</option>
-      </select>
+    <label for="protein-goal">Fitness Goal:</label>
+    <select id="protein-goal">
+      <option value="maintenance">Maintenance</option>
+      <option value="muscle-gain">Muscle Gain</option>
+      <option value="fat-loss">Fat Loss</option>
+    </select>
 
-      <button class="btn" id="protein-btn">Calculate Protein Intake</button>
-      <p id="protein-output"></p>
-    </div>
-  </section>
+    <button class="btn" id="protein-btn">Calculate Protein Intake</button>
+    <p id="protein-output"></p> <!-- Output span -->
+  </div>
+</section>
 
-  <br>
-  <br>
-  <br>
-  <br>
   <!-- Macronutrient Calculator -->
-  <section class="section__container macro__container">
-    <div class="wrapper">
-      <h2 class="macro__header">Macronutrient Calculator</h2>
-      <p>Enter your details to calculate your daily macronutrient needs:</p>
+<section class="section__container macro__container">
+  <div class="wrapper">
+    <h2 class="macro__header">Macronutrient Calculator</h2>
+    <p>Enter your details to calculate your daily macronutrient needs:</p>
 
-      <label for="macro-weight">Weight (kg):</label>
-      <input type="number" id="macro-weight" placeholder="Your weight in kg">
+    <label for="macro-weight">Weight (kg):</label>
+    <input type="number" id="macro-weight" placeholder="Your weight in kg">
+    <br><span id="macro-weight-error" class="error"></span> <!-- Error span for weight -->
 
-      <label for="macro-goal">Fitness Goal:</label>
-      <select id="macro-goal">
-        <option value="maintenance">Maintenance</option>
-        <option value="bulking">Bulking</option>
-        <option value="cutting">Cutting</option>
-      </select>
+    <label for="macro-goal">Fitness Goal:</label>
+    <select id="macro-goal">
+      <option value="maintenance">Maintenance</option>
+      <option value="bulking">Bulking</option>
+      <option value="cutting">Cutting</option>
+    </select>
 
-      <label for="macro-calories">Daily Calories:</label>
-      <input type="number" id="macro-calories" placeholder="Your daily calorie intake">
+    <label for="macro-calories">Daily Calories:</label>
+    <input type="number" id="macro-calories" placeholder="Your daily calorie intake">
+    <br><span id="macro-calories-error" class="error"></span> <!-- Error span for calories -->
 
-      <button class="btn" id="macro-btn">Calculate Macros</button>
-      <p id="macro-output"></p>
-    </div>
-  </section>
+    <button class="btn" id="macro-btn">Calculate Macros</button>
+    <p id="macro-output"></p> <!-- Output span -->
+  </div>
+</section>
 
-
-  <br>
-  <br>
-  <br>
-  <br>
   <footer class="footer" id="contact">
     <div class="section__container footer__container">
       <div class="footer__col">
