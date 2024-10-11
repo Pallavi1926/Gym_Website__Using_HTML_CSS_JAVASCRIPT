@@ -83,7 +83,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-nav {
+/* nav {
   background-color: var(--text-dark);
   position: fixed;
   width: 100%;
@@ -97,6 +97,24 @@ nav {
   display: flex;
   align-items: center;
   color: white;
+} */
+
+nav {
+  background-color: var(--text-dark);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0; /* Ensures it's fixed at the top */
+}
+
+.nav__bar {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10rem; /* Adjust spacing as needed */
 }
 
 .nav__logo img {
@@ -851,7 +869,8 @@ url("assets/banner-2.png");
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--white); 
+  /* background-color: black; */
   border-radius: 2px;
   
 }
