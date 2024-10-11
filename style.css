@@ -578,7 +578,7 @@ nav {
 .bmi__header{
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--primary-color);
 }
 
 .bmi__container span{
@@ -616,10 +616,12 @@ nav {
 url("assets/banner-2.png");
 }
 .bmi__container input{
-  outline: none;
+  outline-style:solid;
+  outline-color:var(--primary-color);
+  outline-width:10px;
 }
 .bmi__container .btn{
-  color:whitesmoke;
+  color: var(--primary-color);
   background-color: #5b5757;
 }
 
