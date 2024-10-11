@@ -869,7 +869,8 @@ url("assets/banner-2.png");
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
+  background-color: var(--white); 
+  /* background-color: black; */
   border-radius: 2px;
   
 }
