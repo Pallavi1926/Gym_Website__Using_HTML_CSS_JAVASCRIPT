@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: white;
 }
 
 .blog-card {
@@ -44,16 +45,17 @@
     position: relative;
 }
 .close {
-    color: #aaa;
+    color:black;
     position: absolute;
     right: 20px;
     top: 10px;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
-    color: #000;
+    color:white;
     cursor: pointer;
 }
 /* Additional styling */
