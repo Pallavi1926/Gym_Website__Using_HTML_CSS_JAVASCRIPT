@@ -1,0 +1,37 @@
+{
+    "id": 2,
+    "title": "A Guide to Setting and Achieving Fitness Goals",
+    "image": "assets/blog-2.jpg",
+    "content": [
+        {
+            "type": "heading",
+            "text": "Introduction"
+        },
+        {
+            "type": "paragraph",
+            "text": "Setting fitness goals is essential for tracking your progress and staying motivated. This article will guide you through effective goal-setting techniques..."
+        },
+        {
+            "type": "heading",
+            "text": "SMART Goals"
+        },
+        {
+            "type": "paragraph",
+            "text": "One popular method for setting effective goals is the SMART criteria, which stands for Specific, Measurable, Achievable, Relevant, and Time-bound."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Specific: Define the goal clearly.",
+                "Measurable: Track your progress.",
+                "Achievable: Set realistic expectations.",
+                "Relevant: Ensure it aligns with your overall fitness journey.",
+                "Time-bound: Set a deadline for your goal."
+            ]
+        },
+        {
+            "type": "paragraph",
+            "text": "By following the SMART criteria, you can create clear and actionable fitness goals that will help you stay focused and motivated on your journey."
+        }
+    ]
+}

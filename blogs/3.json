@@ -1,0 +1,48 @@
+{
+    "id": 3,
+    "title": "Mastering Squats and Other Essential Leg Exercises",
+    "image": "assets/blog-3.jpg",
+    "content": [
+        {
+            "type": "heading",
+            "text": "Introduction"
+        },
+        {
+            "type": "paragraph",
+            "text": "Squats are one of the most effective exercises for building lower body strength. This guide will cover how to master squats and include other key leg exercises."
+        },
+        {
+            "type": "heading",
+            "text": "Benefits of Squats"
+        },
+        {
+            "type": "paragraph",
+            "text": "Squats target multiple muscle groups including your quadriceps, hamstrings, and glutes. They help build muscle mass and improve overall stability."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Strengthens the legs and glutes",
+                "Improves balance and mobility",
+                "Burns calories and supports fat loss",
+                "Enhances core strength"
+            ]
+        },
+        {
+            "type": "heading",
+            "text": "Other Essential Leg Exercises"
+        },
+        {
+            "type": "paragraph",
+            "text": "In addition to squats, including other leg exercises like lunges, leg presses, and calf raises can further enhance your leg workout routine."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Lunges: Great for balance and targeting multiple muscle groups.",
+                "Leg Press: Focuses on the quads, hamstrings, and glutes.",
+                "Calf Raises: Builds strength in your calves and improves ankle stability."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "id": 4,
+    "title": "Building Stronger Biceps: Effective Exercises and Tips",
+    "image": "assets/blog-4.jpg",
+    "content": [
+        {
+            "type": "heading",
+            "text": "Introduction"
+        },
+        {
+            "type": "paragraph",
+            "text": "Biceps are one of the most visible muscles in the upper body, and training them effectively requires the right combination of exercises. This guide will help you build stronger, well-defined biceps."
+        },
+        {
+            "type": "heading",
+            "text": "Key Bicep Exercises"
+        },
+        {
+            "type": "paragraph",
+            "text": "There are several bicep exercises that target different parts of the muscle. Incorporating a variety of exercises into your routine ensures balanced development."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Barbell Curl: Focuses on overall bicep strength.",
+                "Hammer Curl: Targets both the biceps and forearms.",
+                "Concentration Curl: Isolates the biceps for maximum contraction."
+            ]
+        },
+        {
+            "type": "heading",
+            "text": "Tips for Maximizing Bicep Growth"
+        },
+        {
+            "type": "paragraph",
+            "text": "To ensure continuous progress, use proper form, progressively increase weights, and combine high-rep and low-rep sets in your routine."
+        }
+    ]
+}

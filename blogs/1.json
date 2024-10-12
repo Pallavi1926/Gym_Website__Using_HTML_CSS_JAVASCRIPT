@@ -1,0 +1,33 @@
+{
+    "id": 1,
+    "title": "Fueling Your Body for Optimal Performance",
+    "image": "assets/blog-1.jpg",
+    "content": [
+      {
+        "type": "heading",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your body requires the right nutrients to perform at its best. In this article, we explore the essential nutrients you need..."
+      },
+      {
+        "type": "heading",
+        "text": "Key Nutrients for Performance"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Protein for muscle repair",
+          "Carbohydrates for energy",
+          "Fats for endurance",
+          "Hydration for optimal function"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "These nutrients not only help you recover faster but also give you the stamina and strength you need to push through tough workouts."
+      }
+    ]
+  }
+  
