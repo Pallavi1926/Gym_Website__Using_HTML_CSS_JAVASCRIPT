@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blog.css">
   <title>FitPhysique</title>
 
 </head>
@@ -417,32 +418,118 @@
     });
   </script>
 
-  <section class="blog" id="blog">
-    <div class="section__container blog__container">
-      <h2 class="section__header">BLOGS</h2>
-      <div class="blog__grid">
-        <div class="blog__card">
-          <img src="assets/blog-1.jpg" alt="blog" />
-          <h4>Fueling Your Body for Optimal Performance</h4>
-        </div>
-        <div class="blog__card">
-          <img src="assets/blog-2.jpg" alt="blog" />
-          <h4>A Guide to Setting and Achieving Fitness Goals</h4>
-        </div>
-        <div class="blog__card">
-          <img src="assets/blog-3.jpg" alt="blog" />
-          <h4>Tips and Techniques for Efficient Exercise</h4>
-        </div>
-        <div class="blog__card">
-          <img src="assets/blog-4.jpg" alt="blog" />
-          <h4>A Beginner's Guide to Starting Your Running Journey</h4>
-        </div>
+
+ <!-- Blog Section -->
+ <section class="blog" id="blog">
+  <div class="section__container blog__container">
+    <h2 class="section__header">BLOGS</h2>
+    <div class="blog-container">
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="assets/blog-1.jpg" alt="Fueling Your Body for Optimal Performance" />
+        <h4>Fueling Your Body for Optimal Performance</h4>
+        <p>Discover how the right nutrition can boost your workouts and help you reach your fitness goals...</p>
+        <button class="read-more" data-id="1">Read More</button>
       </div>
-      <div class="blog__btn">
-        <button class="btn btn__primary">VIEW ALL</button>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+          <img src="assets/blog-2.jpg" alt="A Guide to Setting and Achieving Fitness Goals" />
+          <h4>A Guide to Setting and Achieving Fitness Goals</h4>
+          <p>Learn how to set realistic fitness goals and stay motivated to achieve them...</p>
+          <button class="read-more" data-id="2">Read More</button>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="assets/blog-3.jpg" alt="Tips for Efficient Exercise" />
+        <h4>Tips and Techniques for Efficient Exercise</h4>
+        <p>Maximize your workout efficiency with these expert exercise tips and techniques...</p>
+        <button class="read-more" data-id="3">Read More</button>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="blog-card">
+        <img src="assets/blog-4.jpg" alt="Starting Your Running Journey" />
+        <h4>A Beginner's Guide to Starting Your Running Journey</h4>
+        <p>New to running? Here's how to start your running journey with confidence and ease...</p>
+        <button class="read-more" data-id="4">Read More</button>
       </div>
     </div>
-  </section>
+
+    <div class="blog__btn">
+      <button class="btn btn__primary">VIEW ALL</button>
+    </div>
+  </div>
+
+  <!-- Blog Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="blog-content"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Get modal element and close button
+  const modal = document.getElementById('blogModal');
+  const closeModal = document.querySelector('.close');
+
+  // Function to open the modal and display blog content
+  function openModal(blogId) {
+      fetch(`blogs/${blogId}.json`) // Ensure this path is correct
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.json();
+          })
+          .then(data => {
+              let blogHtml = `<h1>${data.title}</h1>`;
+              blogHtml += `<img src="${data.image}" alt="${data.title}" style="width: 100%; height: auto;">`;
+              blogHtml += data.content.map(item => {
+                  if (item.type === 'heading') {
+                      return `<h2>${item.text}</h2>`;
+                  } else if (item.type === 'paragraph') {
+                      return `<p>${item.text}</p>`;
+                  } else if (item.type === 'list') {
+                      return `<ul>${item.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+                  }
+              }).join('');
+
+              document.getElementById('blog-content').innerHTML = blogHtml;
+              modal.style.display = "block";
+              document.body.style.overflow = 'hidden'; // Disable scroll when modal is open
+          })
+          .catch(error => {
+              console.error('Error fetching blog data:', error);
+          });
+  }
+
+  // Close the modal when the user clicks on <span> (x)
+  closeModal.onclick = function() {
+      modal.style.display = "none";
+      document.body.style.overflow = 'auto'; // Enable scroll when modal is closed
+  }
+
+  // Close the modal when the user clicks outside the modal content
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = 'auto'; // Enable scroll when modal is closed
+      }
+  }
+
+  // Add event listener to "Read More" buttons
+  document.querySelectorAll('.read-more').forEach(button => {
+      button.addEventListener('click', function() {
+          const blogId = this.getAttribute('data-id');
+          openModal(blogId);
+      });
+  });
+</script>
+
 
   <section class="section__container bmi__container">
 
