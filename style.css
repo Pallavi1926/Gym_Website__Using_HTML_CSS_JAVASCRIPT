@@ -191,12 +191,16 @@ nav {
   margin-top: 60px;
 }
 
-/* card hover effect */
+
 .trainer__card {
-  position: relative;
-  overflow: hidden;
+  width: 300px; 
+  margin: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  height: auto; 
 }
 
 .trainer__card:hover {
@@ -364,9 +368,12 @@ nav {
 }
 
 .trainer__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: stretch;
+  padding: 20px; 
+  overflow: auto;
 }
 
 .trainer__card img {
@@ -417,12 +424,13 @@ nav {
 
 .membership__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
   gap: 1rem;
 }
 
 .membership__card {
   padding: 1rem;
+  width:40vw;
   background-color: rgba(0, 0, 0, 0.6);
   transition: 0.3s;
 }
@@ -675,7 +683,8 @@ textarea:hover{
   padding: 20px;
   background-color: #d44f3b;
   color: white;
-  border: 2px black solid;
+  border: none;
+  outline: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
