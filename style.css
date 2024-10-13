@@ -7,13 +7,15 @@
   --text-light: #737373;
   --extra-light: #e5e5e5;
   --white: #ffffff;
-  --max-width: 1200px;
+  --max-width: 1400px;
   --header-font: "Oswald", sans-serif;
 }
 
 * {
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  margin: auto;
+  overflow-x: hidden; 
 }
 
 .section__container {
@@ -85,13 +87,83 @@ nav {
   background-color: var(--text-dark);
   position: fixed;
   width: 100%;
-  z-index: 9;
+  z-index: 100;
 }
 
 .nav__bar {
   width: 100%;
   max-width: var(--max-width);
   margin-inline: auto;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.nav__logo img {
+  max-width: 110px;
+}
+
+.nav__links { 
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__links li {
+  display: inline;
+  position: relative; /* Ensure the hover line is positioned relative to each link */
+}
+
+.nav__links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  font-family: var(--header-font);
+  white-space: nowrap;
+  color: var(--white);
+}
+
+/* Hover effect: Red line under link */
+.nav__links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.05s ease;
+}
+
+.nav__links li a:hover::after {
+  width: 100%; /* Line expands on hover */
+}
+
+.nav__links li a:hover {
+  color: white; /* Text remains white on hover */
+}
+
+.nav__links li.active a {
+  color: red; /* Red color for the active link */
+}
+
+.nav__links li.active a::after {
+  display: none; 
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav__links i {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
 
 .nav__header {
@@ -102,48 +174,8 @@ nav {
   background-color: var(--text-dark);
 }
 
-.nav__logo img {
-  max-width: 90px;
-}
-
-.nav__menu__btn {
-  font-size: 1.5rem;
-  color: var(--white);
-  cursor: pointer;
-}
-
-.nav__links {
-  position: absolute;
-  top: 68px;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-  background-color: var(--text-dark);
-  transition: 0.5s;
-  z-index: -1;
-  transform: translateY(-100%); /*IMP*/
-}
-
-.nav__links.open {
-  transform: translateY(0);
-}
-
-.nav__links a {
-  font-size: 1.1rem;
-  font-family: var(--header-font);
-  white-space: nowrap;
-  color: var(--white);
-  transition: 0.3s;
-}
-
-.nav__links a:hover {
-  color: var(--primary-color);
+.nav__bar {
+  gap: 10rem;
 }
 
 .header {
@@ -152,10 +184,34 @@ nav {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.8)
     ),
-    url("assets/header.jpg");
+    url("assets/lean-man-doing-lateral-raises.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+/* card hover effect */
+.trainer__card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.trainer__card:hover {
+  transform: scale(1.1);
+}
+
+.nav_style {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.nav_style:hover {
+  transform: scale(1.5);
 }
 
 .header__container {
@@ -246,6 +302,7 @@ nav {
 
 .session {
   display: grid;
+  width: 100%;
 }
 
 .session__card {
@@ -618,7 +675,7 @@ label {
   padding: 10px;
   background-color: red;
   color: white;
-  border: none;
+  border: 2px black solid;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -643,20 +700,19 @@ label {
 /* end */
 .footer {
   background-color: var(--text-dark);
-}
-
+  width: 100%;
 .footer__container {
   display: grid;
   gap: 4rem 2rem;
+  width: 100%;
 }
 
 .footer__logo img {
   margin-bottom: 1rem;
-  max-width: 120px;
+  max-width: 100vw;
 }
 
 .footer__col p {
-  margin-bottom: 2rem;
   color: var(--text-light);
 }
 
@@ -699,7 +755,7 @@ label {
   margin-bottom: 1rem;
   width: 100%;
   max-width: 400px;
-  height: 10.7rem;
+  height: 23.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -712,10 +768,14 @@ label {
 .footer__col input {
   width: 100%;
   padding-inline: 1rem;
-  padding-top: 1.1rem;
+  padding-top: 0.8rem;
   outline: none;
-  border: none;
+  border: 2px solid transparent;
   color: var(--text-dark)
+}
+.footer__col input:hover,
+.footer__col input:focus{
+  border: 2px solid var(--primary-color);
 }
 
 .footer__col form button{
@@ -733,7 +793,7 @@ label {
   display: flex;
   align-items: center;
   padding-top: 1.1rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer__socials a {
@@ -755,9 +815,6 @@ label {
   color: var(--text-light);
   text-align: center;
 }
-
-
-
 
 @media (width > 540px) {
   .about__grid {
@@ -786,41 +843,6 @@ label {
 }
 
 @media (width > 768px){
-  nav{
-    position: static;
-    padding: 1.5rem 1rem;
-  }
-
-  .nav__bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-
-  .nav__header{
-    padding: 0;
-    background-color: transparent;
-  }
-
-  .nav__logo img{
-    max-width: 120px;
-  }
-
-  .nav__menu__btn{
-  display: none;
-  }
-
-  .nav__links{
-    position: static;
-    padding: 0;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: transparent;
-    transform: none;
-    z-index: 1;
-  }
-
   .header__container {
     padding-block: 12rem;
     grid-template-columns: repeat(2, 1fr);
@@ -891,7 +913,68 @@ label {
   }
 }
 
+@media (max-width: 600px) {
+  .footer {
+    padding: 5px;
+  }
+}
+}
 
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 
+  .nav__menu__btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+  }
 
+  .nav__links {
+    position: fixed;
+    top: 0; 
+    right: -100%;
+    height: 100vh; 
+    width: 200px;
+    background-color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.3s ease;
+    margin: 0; 
+    padding: 0;
+  }
 
+  .nav__links li {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .nav__links li a {
+    font-size: 18px;
+    padding: 0.2rem 0;
+    display: block;
+  }
+
+  .nav__links i {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .nav__links.open {
+    right: 0;
+  }
+
+  .nav__logo {
+    display: block;
+    margin-right: 200px;
+  }
+}
