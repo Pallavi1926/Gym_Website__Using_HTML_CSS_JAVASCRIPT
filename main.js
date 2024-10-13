@@ -2,6 +2,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const closeIcon = navLinks.querySelector("i.ri-close-line");
+const bmiBtn = document.getElementById('btn');
 
 // Toggle the mobile menu visibility
 menuBtn.addEventListener("click", () => {
@@ -156,3 +157,31 @@ function sendEmail() {
     Body: "And this is the body",
   }).then((message) => alert(message));
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutHeader = document.querySelector('.about__header');
+  const aboutCards = document.querySelectorAll('.about__card');
+
+  function checkScroll() {
+      const rect = aboutHeader.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight && rect.bottom > 0) {
+          aboutHeader.classList.add('visible');
+      }
+
+      aboutCards.forEach(card => {
+          const cardRect = card.getBoundingClientRect();
+          if (cardRect.top < windowHeight && cardRect.bottom > 0) {
+              card.classList.add('visible');
+          }
+      });
+  }
+
+  checkScroll();
+
+  window.addEventListener('scroll', checkScroll);
+});
+
+

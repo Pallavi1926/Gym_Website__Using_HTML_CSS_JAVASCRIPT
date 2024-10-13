@@ -36,23 +36,64 @@
   color: var(--text-light);
 }
 
+/* General button styling */
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   outline: none;
   border: none;
   color: var(--white);
-  border-radius: 2px;
-  transition: 0.3s;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+
+  /* Classy box shadow */
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
+.success {
+  color: #d44f3b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Primary button styling */
 .btn__primary {
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover effect */
 .btn__primary:hover {
-  background-color: var(--primary-color-dark);
+  background-color: rgb(251, 111, 109);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
 }
+
+/* Styling the button */
+.btn__primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
 
 .btn__secondary {
   background-color: transparent;
@@ -220,35 +261,82 @@ nav {
 }
 
 .header__content h1 {
+  /* Create a typewriter effect */
+  overflow: hidden;
+  border-right: 0.08em solid rgb(45, 38, 24);
+  white-space: nowrap;
+  line-height: 0.8em;
+  height: 0.8em;
+  margin: 0px;
+
+  letter-spacing: 0.10em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+
+    /*  */
   font-size: 4.5rem;
   font-weight: 700;
   font-family: var(--header-font);
-  line-height: 5rem;
+  width: 10.8ch;
   color: var(--primary-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),   /* Light shadow for subtle depth */
+               -1px -1px 5px rgba(255, 255, 255, 0.2); /* Softer highlight effect */
 }
 
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 11ch }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(251, 111, 109); }
+}
+
+/* Text shadow */
 .header__content h2 {
   margin-bottom: 1rem;
   font-size: 2.5rem;
   font-weight: 400;
   font-family: var(--header-font);
-  line-height: 3rem;
   color: var(--white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2),
+               -1px -1px 2px rgba(255, 255, 255, 0.1);
 }
 
+/* Styling with text shadow done */
 .header__content p {
   margin-bottom: 2rem;
   color: var(--extra-light);
+  width: 60vw;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
 }
+
+/* About section */
 
 .about__header {
   text-align: center;
   display: grid;
   gap: 1rem;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start with a slight downward shift */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+}
+
+/* When the element is visible, apply the styles */
+.about__header.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
 }
 
 .about__header .section__header {
   font-size: 3rem;
+  
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 0 0 25px rgba(251, 111, 109, 0.7);
 }
 
 .about__header .section__description {
@@ -262,12 +350,38 @@ nav {
   gap: 4rem;
 }
 
+.about__card{
+  width: 80vw;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  overflow: hidden;
+}
+
+/* When the card is visible */
+.about__card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
 .about__card h4 {
+
+  overflow: hidden;
   position: relative;
   isolation: isolate;
   margin-bottom: 1rem;
   padding-top: 4rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -298,6 +412,9 @@ nav {
 
 .about__card p {
   color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .session {
@@ -675,7 +792,6 @@ textarea:hover{
   padding: 20px;
   background-color: #d44f3b;
   color: white;
-  border: 2px black solid;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
