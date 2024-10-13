@@ -518,192 +518,139 @@ nav {
   margin-inline: auto;
 }
 
-.bmi__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
+
+/* edits */
+
+/* General Styling for Headers */
+.bmi__header,
+.protein__header,
+.macro__header {
+    font-size: 40px; /* Increased for better readability */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: white; /* White text for better contrast on black background */
+    margin-bottom: 1rem; /* Added spacing below headers */
+    text-align: center; /* Center align for consistency */
 }
 
-.bmi__container span{
-  color: red;
-}
-.bmi__container{
+.wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height:400px;
-  background: white;
-  
-  
- 
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Space items equally */
+  height: 100%; /* Ensure the wrapper takes full height */
+  padding: 20px; /* Add padding around the content */
 }
 
-.bmi__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  
-  background: white;
-  border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
-}
-.bmi__container input{
-  outline: none;
-}
-.bmi__container .btn{
-  color:#5b5757
+.wrapper label {
+  margin-bottom: 10px; /* Space below labels */
 }
 
- form {
-  display: flex;
-}
-#form-bg{
-  background-color: transparent;
-}
-
-
-input[type="text"] {
-  margin: 10px 0;
-  padding: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.wrapper input,
+.wrapper select {
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 10px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    width: 100%; /* Full width */
 }
 
-
-input[type="text"]:hover, input[type="text"]:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
+/* Flexbox layout for the row of calculators */
+.calculators__container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between calculators */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Takes full width of the screen */
+    background-color: black; /* Set background to black */
+    padding: 20px;
+    gap: 20px; /* Gap between the calculators */
 }
 
-
-.btn__primary {
-  padding: 20px;
-  background-color: #d44f3b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Container Styling for BMI, Protein, and Macro Calculators */
+.bmi__container,
+.protein__container,
+.macro__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center align items */
+    width: 30%; /* Each container takes up 30% of the row */
+    height: 700px; /* Height auto to accommodate content */
+    background-color: #1a1a1a; /* Darker background for better contrast */
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 0px 20px 30px -10px rgb(38, 57, 77);
+    padding: 20px; /* Padding inside the containers */
 }
 
-
-
-.btn__primary:active {
-  background-color: #004494;
-  transform: scale(1);
+/* Form Input Styling */
+.bmi__container input,
+.protein__container input,
+.macro__container input,
+.protein__container select,
+.macro__container select {
+    outline: none;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: Arial, sans-serif;
+    width: 300px; /* Ensures inputs are not too wide */
 }
 
-
-.protein__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus {
+    
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.protein__container span{
-  color: red;
-}
-.protein__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height:400px;
-  background: white;
-  
-  
- 
+/* Align the labels and inputs */
+label {
+    display: block; /* Each label on a new line */
+    margin-top: 10px; /* Space above labels */
+    color: white; /* White color for labels */
+    text-align: center; /* Center align labels */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
 }
 
-.protein__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  
-  background: white;
-  border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the button */
+    margin-top: auto; /* Push the button to the bottom of the container */
+    margin-bottom: 10px; /* Space below the button */
 }
-.protein__container input{
-  outline: none;
+
+/* Button Primary - Used across all sections */
+.btn {
+    position: relative;
+    padding: 10px 20px;
+    background-color: red; /* Red background for buttons */
+    color: white; /* White text for buttons */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto;
+    width: 100%;
 }
-.protein__container .btn{
-  color:#5b5757
+
+.btn:hover {
+    background-color: darkred; /* Darker red for hover effect */
+    transform: scale(1.05);
 }
 
 
-.macro__header{
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
+/* :end */
 
-.macro__container span{
-  color: red;
-}
-.macro__container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height:400px;
-  background: white;
-  
-  
- 
-}
 
-.macro__container .wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  
-  background: white;
-  border-radius: 5px;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  background-image: linear-gradient(
-    to right,
-    rgba(187, 180, 180, 0.8),
-    rgba(187, 180, 180, 0.8)
-  ),
-url("assets/banner-2.png");
-}
-.macro__container input{
-  outline: none;
-}
-.macro__container .btn{
-  color:#5b5757
-}
 
 
 .footer {
