@@ -243,8 +243,7 @@ nav {
 
 .about__header {
   text-align: center;
-  display: grid;
-  gap: 1rem;
+  display: flex;
 }
 
 .about__header .section__header {
@@ -258,7 +257,7 @@ nav {
 
 .about__grid {
   margin-top: 4rem;
-  display: grid;
+  display: flex;
   gap: 4rem;
 }
 
