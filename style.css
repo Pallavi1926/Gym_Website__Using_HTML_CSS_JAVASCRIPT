@@ -593,16 +593,14 @@ nav {
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: space-between; /* Space items equally */
-  height: 100%; /* Ensure the wrapper takes full height */
-  padding: 20px; /* Add padding around the content */
+  width: 100%;
+  height:400px;
+  background: white;
+  
+  
+ 
 }
 
-<<<<<<< HEAD
-.wrapper label {
-  margin-bottom: 10px; /* Space below labels */
-=======
 .bmi__container .wrapper{
   display: flex;
   justify-content: center;
@@ -627,108 +625,13 @@ url("assets/banner-2.png");
 .bmi__container .btn{
   color:whitesmoke;
   background-color: #5b5757;
->>>>>>> upstream/main
 }
 
-.wrapper input,
-.wrapper select {
-    padding: 10px; /* Padding inside input fields */
-    margin-bottom: 10px; /* Space below inputs */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 4px; /* Slightly rounded corners */
-    width: 100%; /* Full width */
+ form {
+  display: flex;
 }
-
-/* Flexbox layout for the row of calculators */
-.calculators__container {
-    display: flex;
-    justify-content: space-between; /* Ensures space between calculators */
-    align-items: flex-start; /* Align items to the top */
-    width: 100%; /* Takes full width of the screen */
-    background-color: black; /* Set background to black */
-    padding: 20px;
-    gap: 20px; /* Gap between the calculators */
-}
-
-/* Container Styling for BMI, Protein, and Macro Calculators */
-.bmi__container,
-.protein__container,
-.macro__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between elements */
-    align-items: center; /* Center align items */
-    width: 30%; /* Each container takes up 30% of the row */
-    height: 700px; /* Height auto to accommodate content */
-    background-color: #1a1a1a; /* Darker background for better contrast */
-    border-radius: 5px;
-    color: #ffffff;
-    box-shadow: 0px 20px 30px -10px rgb(38, 57, 77);
-    padding: 20px; /* Padding inside the containers */
-}
-
-/* Form Input Styling */
-.bmi__container input,
-.protein__container input,
-.macro__container input,
-.protein__container select,
-.macro__container select {
-    outline: none;
-    margin: 10px 0;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: Arial, sans-serif;
-    width: 300px; /* Ensures inputs are not too wide */
-}
-
-input[type="text"]:hover,
-input[type="text"]:focus,
-input[type="number"]:hover,
-input[type="number"]:focus {
-    
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-/* Align the labels and inputs */
-label {
-    display: block; /* Each label on a new line */
-    margin-top: 10px; /* Space above labels */
-    color: white; /* White color for labels */
-    text-align: center; /* Center align labels */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-.button-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the button */
-    margin-top: auto; /* Push the button to the bottom of the container */
-    margin-bottom: 10px; /* Space below the button */
-}
-
-/* Button Primary - Used across all sections */
-.btn {
-    position: relative;
-    padding: 10px 20px;
-    background-color: red; /* Red background for buttons */
-    color: white; /* White text for buttons */
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: auto;
-    width: 100%;
-}
-
-.btn:hover {
-    background-color: darkred; /* Darker red for hover effect */
-    transform: scale(1.05);
+#form-bg{
+  background-color: transparent;
 }
 
 #join {
@@ -741,11 +644,17 @@ label {
   font-weight: 700;
 }
 
-/* :end */
+input[type="text"] {
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
 
-<<<<<<< HEAD
-=======
 input[type="text"]:hover, input[type="text"]:focus {
   border-color: #c1406b;
   box-shadow: 0 0 5px rgba(245, 66, 84, 0.5);
@@ -882,7 +791,6 @@ url("assets/banner-2.png");
   color:whitesmoke;
   background-color: #5b5757;
 }
->>>>>>> upstream/main
 
 
 .footer {
