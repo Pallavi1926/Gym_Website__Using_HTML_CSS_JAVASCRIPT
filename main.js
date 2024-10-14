@@ -2,7 +2,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const closeIcon = navLinks.querySelector("i.ri-close-line");
-
+const bmiBtn = document.querySelector(".btn");
 // Toggle the mobile menu visibility
 menuBtn.addEventListener("click", () => {
   navLinks.classList.add("open");
@@ -156,3 +156,38 @@ function sendEmail() {
     Body: "And this is the body",
   }).then((message) => alert(message));
 }
+
+// Navbar active part logic
+document.addEventListener("DOMContentLoaded", function() {
+  const navLinks = document.querySelectorAll('.nav_link');
+  const sections = document.querySelectorAll('section');
+  
+  function setActiveLink() {
+    let currentSection = 'header'; // Default to 'header' (home section)
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 50; // Adjust offset if needed
+      const sectionHeight = section.offsetHeight;
+
+      // Check if the section is in the viewport
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // Remove 'active' from all links, and set only the active one
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(currentSection)) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // Initially set only the 'HOME' link as active
+  const homeLink = document.querySelector('#header'); 
+  homeLink.classList.add('active');
+
+  // Call setActiveLink on scroll
+  window.addEventListener('scroll', setActiveLink);
+});
