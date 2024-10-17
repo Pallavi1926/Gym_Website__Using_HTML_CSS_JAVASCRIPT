@@ -97,6 +97,8 @@ nav {
   display: flex;
   align-items: center;
   color: white;
+  opacity: 0.75;
+  background-color:#5b5757;
 }
 
 .nav__logo img {
